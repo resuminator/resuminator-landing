@@ -8,9 +8,16 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import { Box, Button, Link, makeStyles, Typography } from "@material-ui/core"
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Link,
+  makeStyles,
+  Typography,
+} from "@material-ui/core"
 import React from "react"
-import { FiArrowRight } from "react-icons/fi"
+import { FiArrowDown, FiArrowRight } from "react-icons/fi"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,6 +39,13 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.secondary.light,
   },
   button: {
+    padding: "0.8rem",
+    marginTop: "2rem",
+  },
+  button2:{
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
     padding: "0.8rem",
     marginTop: "2rem",
   },
@@ -76,22 +90,42 @@ function MastHead() {
         support which guides you towards building an effective and powerful
         resumes for a great first-impression.
       </Typography>
-      <Button
-        size="large"
-        color="primary"
-        variant="contained"
-        className={classes.button}
-        endIcon={<FiArrowRight color="inherit" />}
-        disableElevation
-      >
-        <Typography
-          className={classes.buttonText}
-          variant="body1"
-          color="textSecondary"
+      <ButtonGroup>
+        <Button
+          size="large"
+          color="primary"
+          variant="contained"
+          className={classes.button}
+          endIcon={<FiArrowRight color="inherit" />}
+          disableElevation
         >
-          Request Early Access
-        </Typography>
-      </Button>
+          <Typography
+            className={classes.buttonText}
+            variant="body1"
+            color="textSecondary"
+          >
+            Request Early Access
+          </Typography>
+        </Button>
+        <Button
+          size="medium"
+          color="primary"
+          variant="text"
+          className={classes.button2}
+          endIcon={<FiArrowDown color="inherit" />}
+          disableElevation
+          disableTouchRipple
+          href="#features"
+        >
+          <Typography
+            className={classes.buttonText}
+            variant="body1"
+            color="primary"
+          >
+            Learn More
+          </Typography>
+        </Button>
+      </ButtonGroup>
     </Box>
   )
 }

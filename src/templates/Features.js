@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     [theme.breakpoints.down("sm")]: {
       flexWrap: "wrap",
-      margin: "3rem" 
+      margin: "3rem",
     },
   },
   titles: {
@@ -33,6 +33,7 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: "-0.2rem",
     color: theme.palette.primary.light,
     paddingBottom: "0.5rem",
+    marginTop: "0.5rem",
   },
   links: {
     color: theme.palette.secondary.dark,
@@ -44,6 +45,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.contrast.light,
     color: theme.palette.text.primary,
     padding: "0.5rem",
+    paddingBottom: "2rem",
   },
 }))
 
@@ -51,11 +53,13 @@ function Features() {
   const classes = useStyles()
   return (
     <Box
+      component="a"
       display="flex"
       className={classes.root}
       m={15}
       mt={5}
       justifyContent="space-between"
+      id="features"
     >
       <Paper elevation={0} className={classes.paper}>
         <Icon className={classes.icons}>
