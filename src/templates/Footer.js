@@ -11,7 +11,6 @@
 import {
   Box,
   IconButton,
-  Link,
   makeStyles,
   Typography,
 } from "@material-ui/core"
@@ -40,6 +39,7 @@ const useStyles = makeStyles(theme => ({
   },
   links: {
     color: theme.palette.secondary.light,
+    textDecoration: "none"
   },
   button: {
     color: theme.palette.secondary.light,
@@ -71,12 +71,12 @@ function Footer() {
             className={classes.subtext}
           >
             Resuminator a project by{" "}
-            <Link
+            <a
               className={classes.links}
-              to="https://github.com/viveknigam3003"
+              href="https://github.com/viveknigam3003"
             >
               Vivek Nigam
-            </Link>{" "}
+            </a>{" "}
             and maintained by the Bitshift Open Community.
           </Typography>
           <IconButton

@@ -11,7 +11,6 @@
 import {
   Box,
   Icon,
-  Link,
   makeStyles,
   Paper,
   Typography,
@@ -37,6 +36,7 @@ const useStyles = makeStyles(theme => ({
   },
   links: {
     color: theme.palette.secondary.dark,
+    textDecoration: "none"
   },
   paper: {
     display: "flex",
@@ -70,12 +70,12 @@ function Features() {
         </Typography>
         <Typography variant="body1">
           Powered by a strong developer and designer community. Find it on{" "}
-          <Link
+          <a
             className={classes.links}
-            to="https://github.com/viveknigam3003/resuminator"
+            href="https://github.com/viveknigam3003/resuminator"
           >
             viveknigam3003/resuminator
-          </Link>
+          </a>
         </Typography>
       </Paper>
       <Paper elevation={0} className={classes.paper}>
