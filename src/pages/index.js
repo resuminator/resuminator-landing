@@ -10,6 +10,7 @@
 
 import { MuiThemeProvider } from "@material-ui/core"
 import React from "react"
+import Features from "../templates/Features"
 import Footer from "../templates/Footer"
 import MastHead from "../templates/MastHead"
 import { theme } from "../templates/theme"
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <MuiThemeProvider theme={theme}>
       <MastHead />
+      <Features />
       <Footer />
     </MuiThemeProvider>
   )
