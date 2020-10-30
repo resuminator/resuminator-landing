@@ -1,12 +1,11 @@
-html, body, #___gatsby {
-    height: 100%;
+html, body, #___gatsby #gatsby-focus-wrapper {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
     overflow-y: auto;
+    background-color: #fffafa;
 }
 
 body {
     margin: 0px;
-}
-
-div[role="group"][tabindex] {
-    height: 100%;
 }
