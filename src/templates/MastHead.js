@@ -8,7 +8,7 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import { Box, Button, makeStyles, Typography } from "@material-ui/core"
+import { Box, Button, Link, makeStyles, Typography } from "@material-ui/core"
 import React from "react"
 import { FiArrowRight } from "react-icons/fi"
 
@@ -40,6 +40,14 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700,
     textTransform: "none",
   },
+  text: {
+    paddingLeft: "0.4rem",
+    marginTop: "3rem",
+    color: theme.palette.grey[700],
+    [theme.breakpoints.up("sm")]: {
+      width: "50%",
+    },
+  },
 }))
 
 function MastHead() {
@@ -61,6 +69,12 @@ function MastHead() {
       </Typography>
       <Typography variant="h5" className={classes.subtitle}>
         Build beautiful single-page resumes
+      </Typography>
+      <Typography variant="subtitle1" className={classes.text}>
+        Resuminator enables you to build and manage multiple resumes with{" "}
+        <Link to="https://en.wikipedia.org/wiki/Lint_(software)">linting</Link>{" "}
+        support which guides you towards building an effective and powerful
+        resumes for a great first-impression.
       </Typography>
       <Button
         size="large"
