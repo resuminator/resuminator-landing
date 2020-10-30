@@ -74,7 +74,7 @@ function Footer() {
           </Link>{" "}
           and maintained by the Bitshift Open Community.
         </Typography>
-        <IconButton className={classes.button}>
+        <IconButton className={classes.button} href="https://github.com/viveknigam3003/resuminator">
           <FiGithub />
         </IconButton>
       </Box>
