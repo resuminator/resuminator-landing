@@ -49,36 +49,45 @@ const useStyles = makeStyles(theme => ({
 function Footer() {
   const classes = useStyles()
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      className={classes.root}
-      bgcolor="primary.main"
-    >
-      <Typography variant="h6" className={classes.text} color="secondary">
-        Resuminator
-      </Typography>
+    <footer>
       <Box
         display="flex"
-        flexGrow={1}
-        flexShrink={1}
-        justifyContent="space-between"
+        flexDirection="column"
+        className={classes.root}
+        bgcolor="primary.main"
       >
-        <Typography component="div" variant="body2" className={classes.subtext}>
-          Resuminator a project by{" "}
-          <Link
-            className={classes.links}
-            to="https://github.com/viveknigam3003"
-          >
-            Vivek Nigam
-          </Link>{" "}
-          and maintained by the Bitshift Open Community.
+        <Typography variant="h6" className={classes.text} color="secondary">
+          Resuminator
         </Typography>
-        <IconButton className={classes.button} href="https://github.com/viveknigam3003/resuminator">
-          <FiGithub />
-        </IconButton>
+        <Box
+          display="flex"
+          flexGrow={1}
+          flexShrink={1}
+          justifyContent="space-between"
+        >
+          <Typography
+            component="div"
+            variant="body2"
+            className={classes.subtext}
+          >
+            Resuminator a project by{" "}
+            <Link
+              className={classes.links}
+              to="https://github.com/viveknigam3003"
+            >
+              Vivek Nigam
+            </Link>{" "}
+            and maintained by the Bitshift Open Community.
+          </Typography>
+          <IconButton
+            className={classes.button}
+            href="https://github.com/viveknigam3003/resuminator"
+          >
+            <FiGithub />
+          </IconButton>
+        </Box>
       </Box>
-    </Box>
+    </footer>
   )
 }
 

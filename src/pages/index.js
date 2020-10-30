@@ -14,13 +14,25 @@ import Features from "../templates/Features"
 import Footer from "../templates/Footer"
 import MastHead from "../templates/MastHead"
 import { theme } from "../templates/theme"
+import { Helmet } from "react-helmet"
 
 export default function Home() {
   return (
-    <MuiThemeProvider theme={theme}>
-      <MastHead />
-      <Features />
-      <Footer />
-    </MuiThemeProvider>
+    <React.Fragment>
+      <Helmet>
+        <meta charSet="utf-8 " />
+        <meta
+          name="Description"
+          content="Build effective and beautiful single page resumes with powerful linting support."
+        />
+        <title>Resuminator | Beautiful Single Page Resumes</title>
+        <html lang="en" />
+      </Helmet>
+      <MuiThemeProvider theme={theme}>
+        <MastHead />
+        <Features />
+        <Footer />
+      </MuiThemeProvider>
+    </React.Fragment>
   )
 }
