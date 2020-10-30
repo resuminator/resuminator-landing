@@ -8,11 +8,17 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import { Box, IconButton, Link, makeStyles, Typography } from "@material-ui/core"
+import {
+  Box,
+  IconButton,
+  Link,
+  makeStyles,
+  Typography,
+} from "@material-ui/core"
 import { FiGithub } from "react-icons/fi"
 import React from "react"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     bottom: 0,
     paddingLeft: "2.5rem",
@@ -30,8 +36,15 @@ const useStyles = makeStyles({
     fontFamily: "Roboto",
     fontWeight: 400,
     marginTop: "1rem",
+    color: theme.palette.contrast.main,
   },
-})
+  links: {
+    color: theme.palette.secondary.light,
+  },
+  button: {
+    color: theme.palette.secondary.light,
+  },
+}))
 
 function Footer() {
   const classes = useStyles()
@@ -45,17 +58,25 @@ function Footer() {
       <Typography variant="h6" className={classes.text} color="secondary">
         Resuminator
       </Typography>
-      <Box display="flex" flexGrow={1} flexShrink={1} justifyContent="space-between">
-        <Typography
-          component="div"
-          variant="body2"
-          className={classes.subtext}
-          color="textSecondary"
-        >
-          Resuminator a project by <Link color="secondary" to="https://github.com/viveknigam3003">Vivek Nigam</Link> and maintained by the Bitshift
-          Open Community.
+      <Box
+        display="flex"
+        flexGrow={1}
+        flexShrink={1}
+        justifyContent="space-between"
+      >
+        <Typography component="div" variant="body2" className={classes.subtext}>
+          Resuminator a project by{" "}
+          <Link
+            className={classes.links}
+            to="https://github.com/viveknigam3003"
+          >
+            Vivek Nigam
+          </Link>{" "}
+          and maintained by the Bitshift Open Community.
         </Typography>
-        <IconButton color="secondary"><FiGithub/></IconButton>
+        <IconButton className={classes.button}>
+          <FiGithub />
+        </IconButton>
       </Box>
     </Box>
   )

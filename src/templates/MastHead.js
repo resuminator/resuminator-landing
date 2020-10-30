@@ -3,7 +3,7 @@
  * Licensed under the GNU General Public License, Version 3.0 (the "License");
  * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at https://www.gnu.org/licenses/gpl-3.0.en.html
- * 
+ *
  * Authors:
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
@@ -12,7 +12,7 @@ import { Box, Button, makeStyles, Typography } from "@material-ui/core"
 import React from "react"
 import { FiArrowRight } from "react-icons/fi"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     fontFamily: "Roboto",
     "@media (min-width:1280px)": {
@@ -29,6 +29,7 @@ const useStyles = makeStyles({
   },
   subtitle: {
     paddingLeft: "0.4rem",
+    color: theme.palette.secondary.light,
   },
   button: {
     padding: "0.8rem",
@@ -39,7 +40,7 @@ const useStyles = makeStyles({
     fontWeight: 700,
     textTransform: "none",
   },
-})
+}))
 
 function MastHead() {
   const classes = useStyles()
@@ -58,7 +59,7 @@ function MastHead() {
       <Typography variant="h1" className={classes.title} color="textPrimary">
         Resuminator
       </Typography>
-      <Typography variant="h5" className={classes.subtitle} color="secondary">
+      <Typography variant="h5" className={classes.subtitle}>
         Build beautiful single-page resumes
       </Typography>
       <Button
