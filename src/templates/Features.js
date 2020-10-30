@@ -21,6 +21,12 @@ import { FiCheckCircle, FiGithub } from "react-icons/fi"
 import { VscSymbolColor } from "react-icons/vsc"
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    [theme.breakpoints.down("sm")]: {
+      flexWrap: "wrap",
+      margin: "3rem" 
+    },
+  },
   titles: {
     fontFamily: "Karla",
     fontWeight: 700,
@@ -29,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "0.5rem",
   },
   links: {
-    color: theme.palette.secondary.light,
+    color: theme.palette.secondary.dark,
   },
   paper: {
     display: "flex",
@@ -37,14 +43,20 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     backgroundColor: theme.palette.contrast.light,
     color: theme.palette.text.primary,
-    padding: "0.5rem"
+    padding: "0.5rem",
   },
 }))
 
 function Features() {
   const classes = useStyles()
   return (
-    <Box display="flex" flexWrap m={15} mt={5} justifyContent="space-between">
+    <Box
+      display="flex"
+      className={classes.root}
+      m={15}
+      mt={5}
+      justifyContent="space-between"
+    >
       <Paper elevation={0} className={classes.paper}>
         <Icon className={classes.icons}>
           <FiGithub />
