@@ -27,6 +27,7 @@ export const theme = responsiveFontSizes(
         primary: "#212121",
         secondary: "#919DF2",
       },
+      contrastThreshold: 4,
     },
   })
 )

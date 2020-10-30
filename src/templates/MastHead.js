@@ -53,6 +53,7 @@ function MastHead() {
       textAlign="left"
       pt={10}
       m={5}
+      flexGrow={1}
     >
       <Typography variant="h1" className={classes.title} color="textPrimary">
         Resuminator
