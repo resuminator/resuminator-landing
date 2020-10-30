@@ -8,13 +8,7 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import {
-  Box,
-  Icon,
-  makeStyles,
-  Paper,
-  Typography,
-} from "@material-ui/core"
+import { Box, Icon, makeStyles, Paper, Typography } from "@material-ui/core"
 import React from "react"
 import { FiCheckCircle, FiGithub } from "react-icons/fi"
 import { VscSymbolColor } from "react-icons/vsc"
@@ -36,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
   links: {
     color: theme.palette.secondary.dark,
-    textDecoration: "none"
+    textDecoration: "none",
   },
   paper: {
     display: "flex",

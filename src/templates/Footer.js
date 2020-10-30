@@ -8,12 +8,7 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import {
-  Box,
-  IconButton,
-  makeStyles,
-  Typography,
-} from "@material-ui/core"
+import { Box, IconButton, makeStyles, Typography } from "@material-ui/core"
 import { FiGithub } from "react-icons/fi"
 import React from "react"
 
@@ -39,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
   links: {
     color: theme.palette.secondary.light,
-    textDecoration: "none"
+    textDecoration: "none",
   },
   button: {
     color: theme.palette.secondary.light,
