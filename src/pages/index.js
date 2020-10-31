@@ -15,6 +15,7 @@ import Footer from "../templates/Footer"
 import MastHead from "../templates/MastHead"
 import { theme } from "../templates/theme"
 import { Helmet } from "react-helmet"
+import Community from "../templates/Community"
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <MuiThemeProvider theme={theme}>
         <MastHead />
         <Features />
+        <Community/>
         <Footer />
       </MuiThemeProvider>
     </React.Fragment>

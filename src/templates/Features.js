@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
       flexWrap: "wrap",
       margin: "3rem",
     },
+    marginBottom: "2rem"
   },
   titles: {
     fontFamily: "Karla",
