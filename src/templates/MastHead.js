@@ -41,6 +41,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: "2rem",
     },
     color: theme.palette.secondary.light,
+    fontWeight: 400
   },
   button: {
     padding: "0.8rem",

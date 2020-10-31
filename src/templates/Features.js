@@ -23,7 +23,10 @@ const useStyles = makeStyles(theme => ({
   titles: {
     fontFamily: "Karla",
     fontWeight: 700,
-    letterSpacing: "-0.2rem",
+    letterSpacing: "-0.1rem",
+    "@media (min-width:1280px)": {
+      letterSpacing: "-0.2rem",
+    },
     color: theme.palette.primary.light,
     paddingBottom: "0.5rem",
     marginTop: "0.5rem",
