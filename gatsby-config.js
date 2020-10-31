@@ -5,8 +5,14 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Resuminator`,
+    siteUrl: `https://www.resuminator.gtsb.io`,
+    description: `Build beautiful single-page resumes`,
+  },
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -42,7 +48,7 @@ module.exports = {
         },
         formats: ['woff2', 'woff'],
         //useMinify: true,
-        //usePreload: true,
+        usePreload: true,
         //usePreconnect: false,
       },
     },
