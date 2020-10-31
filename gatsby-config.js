@@ -17,6 +17,15 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        stylesConfig: {
+          // disableAutoprefixing: true,
+          // disableMinification: true
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
