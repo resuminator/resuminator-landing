@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
   links: {
     color: theme.palette.secondary.dark,
     textDecoration: "none",
+    wordWrap: "break-word"
   },
   paper: {
     display: "flex",
@@ -45,6 +46,51 @@ const useStyles = makeStyles(theme => ({
 
 function Features() {
   const classes = useStyles()
+
+  const pageLink = (
+    <React.Fragment>
+      Powered by a strong developer and designer community. Find it on {<a
+          className={classes.links}
+          href="https://github.com/viveknigam3003/resuminator"
+        >
+          viveknigam3003/resuminator
+        </a>
+       }
+    </React.Fragment>
+  )
+
+  const tiles = [
+    {
+      icon: <FiGithub />,
+      title: "Free and Open Source",
+      content: pageLink,
+    },
+    {
+      icon: <FiCheckCircle />,
+      title: "Effective Linting",
+      content: `Build resumes like never before; know what to put in and what to omit
+      for your job profile. Keep that Resume clean and tidy.`,
+    },
+    {
+      icon: <VscSymbolColor />,
+      title: "Beautiful Themes",
+      content: `Your resume reaches the recruiter before you do. Build a lasting
+      impression with beautiful color and font schemes.`,
+    },
+  ]
+
+  const featureTile = (icon, title, content) => {
+    return (
+      <Paper key={title} elevation={0} className={classes.paper}>
+        <Icon className={classes.icons}>{icon}</Icon>
+        <Typography className={classes.titles} variant="h4">
+          {title}
+        </Typography>
+        <Typography variant="body1">{content}</Typography>
+      </Paper>
+    )
+  }
+
   return (
     <Box
       component="a"
@@ -55,47 +101,7 @@ function Features() {
       justifyContent="space-between"
       id="features"
     >
-      <Paper elevation={0} className={classes.paper}>
-        <Icon className={classes.icons}>
-          <FiGithub />
-        </Icon>
-        <Typography className={classes.titles} variant="h4">
-          Open Source
-        </Typography>
-        <Typography variant="body1">
-          Powered by a strong developer and designer community. Find it on{" "}
-          <a
-            className={classes.links}
-            href="https://github.com/viveknigam3003/resuminator"
-          >
-            viveknigam3003/resuminator
-          </a>
-        </Typography>
-      </Paper>
-      <Paper elevation={0} className={classes.paper}>
-        <Icon className={classes.icons}>
-          <FiCheckCircle />
-        </Icon>
-        <Typography className={classes.titles} variant="h4">
-          Powerful Linting
-        </Typography>
-        <Typography variant="body1">
-          Build resumes like never before; know what to put in and what to omit
-          for your job profile. Keep that Resume clean and tidy.
-        </Typography>
-      </Paper>
-      <Paper elevation={0} className={classes.paper}>
-        <Icon className={classes.icons}>
-          <VscSymbolColor />
-        </Icon>
-        <Typography className={classes.titles} variant="h4">
-          Beautiful Themes
-        </Typography>
-        <Typography variant="body1">
-          Your resume reaches the recruiter before you do. Build a lasting
-          impression with beautiful color and font schemes.
-        </Typography>
-      </Paper>
+      {tiles.map(item => featureTile(item.icon, item.title, item.content))}
     </Box>
   )
 }
