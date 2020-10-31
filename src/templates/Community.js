@@ -1,4 +1,4 @@
-import { Button, makeStyles, Paper, Typography } from "@material-ui/core"
+import { Box, Button, makeStyles, Paper, Typography } from "@material-ui/core"
 import { grey } from "@material-ui/core/colors"
 import React from "react"
 import { FiAlertCircle, FiArrowRight } from "react-icons/fi"
@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
 function Community() {
   const classes = useStyles()
   return (
-    <React.Fragment>
+    <Box>
       <Paper className={classes.root} elevation={1}>
         <Typography variant="h2" className={classes.h2}>
           <span className={classes.logo}>Resuminator</span> is a community
@@ -76,7 +76,7 @@ function Community() {
           </Typography>
         </Button>
       </Paper>
-    </React.Fragment>
+    </Box>
   )
 }
 
