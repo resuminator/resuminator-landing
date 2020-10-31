@@ -22,6 +22,7 @@ module.exports = {
         start_url: "/",
         background_color: "#fffafa",
         theme_color: "#1a237e",
+        icon: "./src/images/favicon.ico",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
