@@ -36,6 +36,10 @@ const useStyles = makeStyles(theme => ({
   },
   subtitle: {
     paddingLeft: "0.4rem",
+    fontSize: "1.5rem",
+    "@media (min-width:1280px)": {
+      fontSize: "2rem",
+    },
     color: theme.palette.secondary.light,
   },
   button: {
@@ -81,7 +85,7 @@ function MastHead() {
       <Typography variant="h1" className={classes.title} color="textPrimary">
         Resuminator
       </Typography>
-      <Typography variant="h5" className={classes.subtitle}>
+      <Typography variant="h2" className={classes.subtitle}>
         Build beautiful single-page resumes
       </Typography>
       <Typography variant="subtitle1" className={classes.text}>
