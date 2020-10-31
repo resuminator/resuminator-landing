@@ -11,12 +11,13 @@
 import { Box, IconButton, makeStyles, Typography } from "@material-ui/core"
 import { FiGithub } from "react-icons/fi"
 import React from "react"
+import Subscribe from "../components/Subscribe"
 
 const useStyles = makeStyles(theme => ({
   root: {
     bottom: 0,
     paddingLeft: "2.5rem",
-    padding: "5rem",
+    padding: "2rem",
     "@media (min-width:1280px)": {
       paddingLeft: "8rem",
       paddingTop: "2rem",
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   subtext: {
     fontFamily: "Roboto",
     fontWeight: 400,
-    marginTop: "1rem",
+    marginTop: "2rem",
     color: theme.palette.contrast.main,
   },
   links: {
@@ -38,6 +39,8 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     color: theme.palette.secondary.light,
+    margin: "1rem",
+    padding: "1rem"
   },
 }))
 
@@ -59,6 +62,7 @@ function Footer() {
           flexGrow={1}
           flexShrink={1}
           justifyContent="space-between"
+          alignItems="stretch"
         >
           <Typography
             component="div"
@@ -81,6 +85,7 @@ function Footer() {
             <FiGithub />
           </IconButton>
         </Box>
+        <Subscribe />
       </Box>
     </footer>
   )
