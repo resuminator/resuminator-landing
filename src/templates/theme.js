@@ -37,7 +37,6 @@ export const theme = responsiveFontSizes(
         main: "#e0e0e0",
         light: "#fffafa",
       },
-
       contrastThreshold: 5,
       tonalOffset: 0.2,
     },
