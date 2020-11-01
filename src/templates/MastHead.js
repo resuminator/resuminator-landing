@@ -16,7 +16,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { FiArrowDown, FiArrowRight } from "react-icons/fi"
 import * as typeformEmbed from "@typeform/embed"
 
@@ -72,17 +72,26 @@ const useStyles = makeStyles(theme => ({
 
 function MastHead() {
   const classes = useStyles()
+  const [openForm, setOpenForm] = useState(false)
 
-  const typeForm = typeformEmbed.makePopup(
-    "https://form.typeform.com/to/WbWsPpSB",
-    {
-      mode: "drawer_right",
-      hideFooter: true,
-      hideHeaders: true,
-      opacity: 0,
-      onSubmit: () => typeForm.close(),
+  useEffect(() => {
+    if(typeof window != `undefined`){
+      const typeForm = typeformEmbed.makePopup(
+        "https://form.typeform.com/to/WbWsPpSB",
+        {
+          mode: "drawer_right",
+          hideFooter: true,
+          hideHeaders: true,
+          opacity: 0,
+          onSubmit: () => typeForm.close(),
+        }
+      )
+
+      if(openForm){
+        typeForm.open()
+      }
     }
-  )
+  }, [openForm])
 
   return (
     <React.Fragment>
@@ -119,7 +128,7 @@ function MastHead() {
             className={classes.button}
             endIcon={<FiArrowRight color="inherit" />}
             disableElevation
-            onClick={() => typeForm.open()}
+            onClick={() => setOpenForm(true)}
           >
             <Typography
               className={classes.buttonText}
