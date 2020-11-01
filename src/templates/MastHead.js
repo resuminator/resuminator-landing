@@ -83,7 +83,8 @@ function MastHead() {
           hideFooter: true,
           hideHeaders: true,
           opacity: 0,
-          onSubmit: () => typeForm.close(),
+          onSubmit: () => {typeForm.close(); setOpenForm(false)},
+          onClose: () => setOpenForm(false)
         }
       )
 
