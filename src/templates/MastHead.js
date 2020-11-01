@@ -18,6 +18,7 @@ import {
 } from "@material-ui/core"
 import React from "react"
 import { FiArrowDown, FiArrowRight } from "react-icons/fi"
+import * as typeformEmbed from "@typeform/embed"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -41,13 +42,13 @@ const useStyles = makeStyles(theme => ({
       fontSize: "2rem",
     },
     color: theme.palette.secondary.light,
-    fontWeight: 400
+    fontWeight: 400,
   },
   button: {
     padding: "0.8rem",
     marginTop: "2rem",
   },
-  button2:{
+  button2: {
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -71,67 +72,84 @@ const useStyles = makeStyles(theme => ({
 
 function MastHead() {
   const classes = useStyles()
+
+  const typeForm = typeformEmbed.makePopup(
+    "https://form.typeform.com/to/WbWsPpSB",
+    {
+      mode: "drawer_right",
+      hideFooter: true,
+      hideHeaders: true,
+      opacity: 0,
+      onSubmit: () => typeForm.close(),
+    }
+  )
+
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      className={classes.root}
-      justify="center"
-      alignItems="start"
-      textAlign="left"
-      pt={10}
-      m={5}
-      flexGrow={1}
-    >
-      <Typography variant="h1" className={classes.title} color="textPrimary">
-        Resuminator
-      </Typography>
-      <Typography variant="h2" className={classes.subtitle}>
-        Build beautiful single-page resumes
-      </Typography>
-      <Typography variant="subtitle1" className={classes.text}>
-        Resuminator enables you to build and manage multiple resumes with{" "}
-        <Link to="https://en.wikipedia.org/wiki/Lint_(software)">linting</Link>{" "}
-        support which guides you towards building an effective and powerful
-        resumes for a great first-impression.
-      </Typography>
-      <ButtonGroup>
-        <Button
-          size="large"
-          color="primary"
-          variant="contained"
-          className={classes.button}
-          endIcon={<FiArrowRight color="inherit" />}
-          disableElevation
-        >
-          <Typography
-            className={classes.buttonText}
-            variant="body1"
-            color="textSecondary"
-          >
-            Request Early Access
-          </Typography>
-        </Button>
-        <Button
-          size="medium"
-          color="primary"
-          variant="text"
-          className={classes.button2}
-          endIcon={<FiArrowDown color="inherit" />}
-          disableElevation
-          disableTouchRipple
-          href="#features"
-        >
-          <Typography
-            className={classes.buttonText}
-            variant="body1"
+    <React.Fragment>
+      <Box
+        display="flex"
+        flexDirection="column"
+        className={classes.root}
+        justify="center"
+        alignItems="start"
+        textAlign="left"
+        pt={10}
+        m={5}
+        flexGrow={1}
+      >
+        <Typography variant="h1" className={classes.title} color="textPrimary">
+          Resuminator
+        </Typography>
+        <Typography variant="h2" className={classes.subtitle}>
+          Build beautiful single-page resumes
+        </Typography>
+        <Typography variant="subtitle1" className={classes.text}>
+          Resuminator enables you to build and manage multiple resumes with{" "}
+          <Link to="https://en.wikipedia.org/wiki/Lint_(software)">
+            linting
+          </Link>{" "}
+          support which guides you towards building an effective and powerful
+          resumes for a great first-impression.
+        </Typography>
+        <ButtonGroup>
+          <Button
+            size="large"
             color="primary"
+            variant="contained"
+            className={classes.button}
+            endIcon={<FiArrowRight color="inherit" />}
+            disableElevation
+            onClick={() => typeForm.open()}
           >
-            Learn More
-          </Typography>
-        </Button>
-      </ButtonGroup>
-    </Box>
+            <Typography
+              className={classes.buttonText}
+              variant="body1"
+              color="textSecondary"
+            >
+              Request Early Access
+            </Typography>
+          </Button>
+          <Button
+            size="medium"
+            color="primary"
+            variant="text"
+            className={classes.button2}
+            endIcon={<FiArrowDown color="inherit" />}
+            disableElevation
+            disableTouchRipple
+            href="#features"
+          >
+            <Typography
+              className={classes.buttonText}
+              variant="body1"
+              color="primary"
+            >
+              Learn More
+            </Typography>
+          </Button>
+        </ButtonGroup>
+      </Box>
+    </React.Fragment>
   )
 }
 
