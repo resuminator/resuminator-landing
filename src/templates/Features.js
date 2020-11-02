@@ -46,6 +46,11 @@ const useStyles = makeStyles(theme => ({
     padding: "0.5rem",
     paddingBottom: "2rem",
   },
+  body: {
+    padding: "0.5rem",
+    paddingTop: "0rem",
+    textAlign: "center"
+  },
 }))
 
 function Features() {
@@ -90,7 +95,7 @@ function Features() {
         <Typography className={classes.titles} variant="h4">
           {title}
         </Typography>
-        <Typography variant="body1">{content}</Typography>
+        <Typography variant="body1" className={classes.body}>{content}</Typography>
       </Paper>
     )
   }
