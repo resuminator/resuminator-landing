@@ -25,6 +25,8 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "Roboto",
     "@media (min-width:1280px)": {
       margin: "8rem",
+      marginTop: "6rem",
+      marginBottom: "6rem"
     },
   },
   title: {
@@ -103,7 +105,7 @@ function MastHead() {
         justify="center"
         alignItems="start"
         textAlign="left"
-        pt={10}
+        pt={2}
         m={5}
         flexGrow={1}
       >

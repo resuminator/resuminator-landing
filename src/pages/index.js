@@ -15,7 +15,8 @@ import Footer from "../templates/Footer"
 import MastHead from "../templates/MastHead"
 import { theme } from "../templates/theme"
 import { Helmet } from "react-helmet"
-import Community from "../templates/Community"
+import MenuBar from "../components/MenuBar"
+import Contribute from "../components/ContributeCard"
 
 export default function Home() {
   return (
@@ -30,9 +31,10 @@ export default function Home() {
         <html lang="en" />
       </Helmet>
       <MuiThemeProvider theme={theme}>
+        <MenuBar />
         <MastHead />
         <Features />
-        <Community/>
+        <Contribute />
         <Footer />
       </MuiThemeProvider>
     </React.Fragment>
