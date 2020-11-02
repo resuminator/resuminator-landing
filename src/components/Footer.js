@@ -11,7 +11,7 @@
 import { Box, IconButton, makeStyles, Typography } from "@material-ui/core"
 import { FiGithub } from "react-icons/fi"
 import React from "react"
-import Subscribe from "../components/Subscribe"
+import Subscribe from "./Subscribe"
 
 const useStyles = makeStyles(theme => ({
   root: {
