@@ -12,6 +12,7 @@ import { Box, IconButton, makeStyles, Typography } from "@material-ui/core"
 import { FiGithub } from "react-icons/fi"
 import React from "react"
 import Subscribe from "./Subscribe"
+import { OWNER_PROFILE, RESUMINATOR_REPO_LINK } from "./Constants"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,6 +43,10 @@ const useStyles = makeStyles(theme => ({
     margin: "1rem",
     padding: "1rem"
   },
+  copyright: {
+    marginTop: "1.5rem",
+    marginBottom: "0rem",
+  }
 }))
 
 function Footer() {
@@ -72,7 +77,7 @@ function Footer() {
             Resuminator a project by{" "}
             <a
               className={classes.links}
-              href="https://github.com/viveknigam3003"
+              href={OWNER_PROFILE}
             >
               Vivek Nigam
             </a>{" "}
@@ -80,12 +85,15 @@ function Footer() {
           </Typography>
           <IconButton
             className={classes.button}
-            href="https://github.com/viveknigam3003/resuminator"
+            href={RESUMINATOR_REPO_LINK}
           >
             <FiGithub />
           </IconButton>
         </Box>
         <Subscribe />
+        <Typography color="textSecondary" variant="caption" align="left" className={classes.copyright}>
+          Copyright &copy; {new Date().getFullYear()} Vivek Nigam
+        </Typography>
       </Box>
     </footer>
   )

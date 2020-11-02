@@ -10,6 +10,7 @@
 
 import { Box, makeStyles, TextField } from "@material-ui/core"
 import React from "react"
+import { FORMSPREE_ACTION_LINK } from "./Constants"
 
 const useStyles = makeStyles(theme => ({
   textField: {
@@ -46,7 +47,7 @@ function Subscribe() {
   const classes = useStyles()
   return (
     <Box display="flex" alignItems="center" justifyContent="start">
-      <form method="post" action="https://formspree.io/f/xpzordgp">
+      <form method="post" action={FORMSPREE_ACTION_LINK}>
         <TextField
           id="subscribe-email"
           label="Subscribe to Updates"

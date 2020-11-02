@@ -19,6 +19,7 @@ import {
 import React, { useEffect, useState } from "react"
 import { FiArrowDown, FiArrowRight } from "react-icons/fi"
 import * as typeformEmbed from "@typeform/embed"
+import { EARLY_ACCESS_TYPEFORM } from "./Constants"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -79,7 +80,7 @@ function MastHead() {
   useEffect(() => {
     if(typeof window != `undefined`){
       const typeForm = typeformEmbed.makePopup(
-        "https://form.typeform.com/to/WbWsPpSB",
+        EARLY_ACCESS_TYPEFORM,
         {
           mode: "drawer_right",
           hideFooter: true,
