@@ -15,7 +15,7 @@ import { FiArrowLeft } from "react-icons/fi"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: "100vh",
+    minHeight: "100vh",
     width: "auto",
     backgroundColor: theme.palette.primary.dark,
     "@media (min-width:1280px)": {
@@ -88,8 +88,9 @@ function Page404() {
         className={classes.img}
         src={NOT_FOUND_IMAGE}
         alt="Err_404_Not_Found"
-        height="150rem"
+        height="190rem"
         width="auto"
+        style={{paddingTop: "2rem"}}
       />
     </Box>
   )

@@ -33,6 +33,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     marginTop: "2rem",
     color: theme.palette.contrast.main,
+    "@media (min-width:1280px)": {
+      width: "30%"
+    },
   },
   links: {
     color: theme.palette.secondary.light,
