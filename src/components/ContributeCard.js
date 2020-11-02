@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Community() {
+function Contribute() {
   const classes = useStyles()
   return (
     <Box>
@@ -80,4 +80,4 @@ function Community() {
   )
 }
 
-export default Community
+export default Contribute
