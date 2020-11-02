@@ -8,9 +8,10 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import { Box, makeStyles, Typography } from "@material-ui/core"
+import { Box, Button, makeStyles, Typography } from "@material-ui/core"
 import NOT_FOUND_IMAGE from "../images/undraw_not_found_60pq.svg"
 import React from "react"
+import { FiArrowLeft } from "react-icons/fi"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width:1280px)": {
       padding: "16rem",
       paddingTop: "8rem",
-      paddingBottom: "8rem"
+      paddingBottom: "8rem",
     },
   },
   logo: {
@@ -42,6 +43,15 @@ const useStyles = makeStyles(theme => ({
   },
   img: {
     paddingTop: "5rem",
+  },
+  backBtn: {
+    color: theme.palette.secondary.light,
+    marginTop: "2rem"
+  },
+  btnText: {
+    fontSize: "1.2rem",
+    textTransform: "none",
+    fontFamily: "Karla"
   }
 }))
 
@@ -66,6 +76,14 @@ function Page404() {
       <Typography className={classes.subtitle} variant="h2">
         Oops, looks like you landed on a wrong address!
       </Typography>
+      <Button
+        startIcon={<FiArrowLeft />}
+        variant="text"
+        className={classes.backBtn}
+        href="/"
+      >
+        <Typography variant="button" className={classes.btnText}>Back to awesomeness</Typography>
+      </Button>
       <img
         className={classes.img}
         src={NOT_FOUND_IMAGE}
