@@ -13,12 +13,10 @@ import NOT_FOUND_IMAGE from "../images/undraw_not_found_60pq.svg"
 import React from "react"
 import { FiArrowLeft } from "react-icons/fi"
 import { motion } from 'framer-motion';
-
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: "100vh",
     width: "auto",
-    
     backgroundColor: theme.palette.primary.dark,
     "@media (min-width:1280px)": {
       padding: "16rem",
@@ -32,29 +30,36 @@ const useStyles = makeStyles(theme => ({
     fontSize: "2rem",
     color: theme.palette.grey[400],
     letterSpacing: "-0.15rem",
+    width:"175px"
   },
   title: {
     fontFamily: "Karla",
     fontWeight: 700,
-    fontSize:'5rem',
-    color: theme.palette.secondary.light
+    fontSize:"6rem",
+    color: theme.palette.secondary.light,
+    width:"175px"
   },
   subtitle: {
     color: theme.palette.primary.light,
     fontSize: "2rem",
     fontWeight: 400,
+    "@media (min-width:300px)": {
+      width:"100%",
+    },
+
+    "@media (max-width:300px)": {
+      width:"85%"
+    },
   },
   img: {
-    paddingTop: "5rem",
-    height:"18rem"
+    
+      display:"block",
+      paddingTop: "2rem",
+      
   },
   backBtn: {
     color: theme.palette.secondary.light,
-    marginTop: "2rem",
-    backgroundColor: theme.palette.primary.dark,
-    border:"none",
-    outline:"none",
-    
+    marginTop: "2rem"
   },
   btnText: {
     fontSize: "1.2rem",
@@ -63,73 +68,40 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+
 function Page404() {
   const classes = useStyles()
 
   return (
-    <Box
-      display="flex"
-      alignItems="start"
-      flexDirection="column"
-      className={classes.root}
-      p={5}
-      pt={10}
-    >
-      <motion.Typography
-        variant="h3"
-        className={classes.logo}
-        initial={{opacity:0,y:"-100px"}}
-        animate={{opacity:1,y:0}}
-        transition={{type:'spring',duration:3}}
+      <Box
+        display="flex"
+        alignItems="start"
+        flexDirection="column"
+        className={classes.root}
+        p={5}
+        pt={10}
         >
-        Resuminator
-      </motion.Typography>
-      <motion.Typography 
-        className={classes.title} 
-        color="secondary" 
-        variant="h1"
-        initial={{x:'100vw'}}
-        animate={{x:0}}
-        transition={{type:'spring',duration:2}}
-      >
-        404
-      </motion.Typography>
-      <motion.Typography className={classes.subtitle} variant="h2"
-         initial={{y:'300px'}}
-        animate={{y:0}}
-        transition={{type:'spring',duration:2}}>
-        Oops, looks like you landed on a wrong address!
-      </motion.Typography>
-      <motion.Button 
-        variant="text"
-        className={classes.backBtn}
-        href="/"
-        initial={{y:'300px'}}
+      <motion.div
+        initial={{y:"500px"}}
         animate={{y:0}}
         transition={{type:'spring',duration:2}}
-        whileHover={{
-            scale:1.1,
-            textShadow:`0px 0px 16px #ff4081`,
-            
-            }}
-      >
-        <FiArrowLeft style={{fontSize:"1.2rem",marginRight:"4px"}}/>
-        <Typography variant="button" className={classes.btnText} >
-          
-            Back to awesomeness
+        >
+        <Typography variant="h3" className={classes.logo}>
+          Resuminator
         </Typography>
-      </motion.Button>
-      <motion.img
-        className={classes.img}
-        src={NOT_FOUND_IMAGE}
-        alt="Err_404_Not_Found"
-        height="190rem"
-        width="auto"
-        style={{paddingTop: "2rem"}}
-        initial={{y:'300px'}}
-        animate={{y:0}}
-        transition={{type:'spring',duration:2}}
-      />
+        <Typography className={classes.title} color="secondary" variant="h1">
+          404
+        </Typography>
+        <Typography className={classes.subtitle} variant="h2">
+          Oops, looks like you landed on a wrong address!
+        </Typography>
+        <Button startIcon={<FiArrowLeft />} variant="text" className={classes.backBtn} href="/">
+          <Typography variant="button" className={classes.btnText} >
+              Back to awesomeness
+          </Typography>
+        </Button>
+        <img className={classes.img} src={NOT_FOUND_IMAGE} alt="Err_404_Not_Found" height="190rem"/>
+      </motion.div>
     </Box>
   )
 }
