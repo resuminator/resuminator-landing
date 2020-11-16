@@ -64,7 +64,7 @@ function Footer() {
 
   return (
     <footer className={classes.root}>
-      <Box id="col-1" display="flex" flexDirection="column" className={classes.col1}>
+      <Box id="col-1" display="flex" flexDirection="column" className={classes.col1} flexGrow={1} flexShrink={1}>
         <Typography variant="h6" className={classes.text} color="secondary">
           Resuminator
         </Typography>
@@ -89,10 +89,10 @@ function Footer() {
           Bitshift Community
         </Typography>
       </Box>
-      <Box id="col-2" display="flex" flexDirection="column">
+      <Box id="col-2" display="flex" flexDirection="column" flexGrow={1} flexShrink={1}>
         <Subscribe />
       </Box>
-      <Box id="col-3" display="flex" flexDirection="column">
+      <Box id="col-3" display="flex" flexDirection="column" flexGrow={1} flexShrink={1}>
         <IconButton className={classes.button} href={RESUMINATOR_REPO_LINK}>
           <FiGithub />
         </IconButton>
