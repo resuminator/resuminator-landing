@@ -43,6 +43,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     margin: "2rem",
     marginLeft: "0rem",
+    maxWidth: "24rem"
   },
   links: {
     color: theme.palette.secondary.light,
@@ -92,8 +93,8 @@ function Footer() {
       <Box id="col-2" display="flex" flexDirection="column" flexGrow={1} flexShrink={1}>
         <Subscribe />
       </Box>
-      <Box id="col-3" display="flex" flexDirection="column" flexGrow={1} flexShrink={1}>
-        <IconButton className={classes.button} href={RESUMINATOR_REPO_LINK}>
+      <Box id="col-3" display="flex" flexDirection="column" flexShrink={1}>
+        <IconButton className={classes.button} href={RESUMINATOR_REPO_LINK} size="small">
           <FiGithub />
         </IconButton>
       </Box>
