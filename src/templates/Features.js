@@ -61,6 +61,7 @@ function Features() {
       Powered by a strong developer and designer community. Find it on {<a
           className={classes.links}
           href="https://github.com/viveknigam3003/resuminator"
+          target="_blank"
         >
           viveknigam3003/resuminator
         </a>
@@ -102,7 +103,6 @@ function Features() {
 
   return (
     <Box
-      component="a"
       display="flex"
       className={classes.root}
       m={15}

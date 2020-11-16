@@ -77,6 +77,7 @@ function MenuBar() {
 
   const optionButtons = (name, linkTo) => (
     <Button
+      key={name}
       variant="text"
       className={classes.optionBtn}
       color="primary"
