@@ -62,6 +62,7 @@ function Features() {
           className={classes.links}
           href="https://github.com/viveknigam3003/resuminator"
           target="_blank"
+          rel="noreferrer"
         >
           viveknigam3003/resuminator
         </a>
