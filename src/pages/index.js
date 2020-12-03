@@ -17,8 +17,23 @@ import { theme } from "../styles/theme"
 import { Helmet } from "react-helmet"
 import MenuBar from "../components/MenuBar"
 import Contribute from "../components/ContributeCard"
+import FeatureBanner from "../components/FeatureBanner"
+import { graphql, useStaticQuery } from "gatsby"
 
 export default function Home() {
+  const data = useStaticQuery(graphql`
+    query Images {
+      image: file(relativePath: { eq: "Re-Md.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 240) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <React.Fragment>
       <Helmet>
@@ -34,6 +49,12 @@ export default function Home() {
         <MenuBar />
         <MastHead />
         <Features />
+        <FeatureBanner
+          title="Style with Markdown"
+          subtitle="Your resume, your expression"
+          bodyText="Bring the ease of working with Markdown and style your resume with bullet points, headings and subheadings, math - whatever you want!"
+          data={data}
+        />
         <Contribute />
         <Footer />
       </MuiThemeProvider>
