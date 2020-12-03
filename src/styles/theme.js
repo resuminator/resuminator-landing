@@ -25,9 +25,9 @@ export const theme = responsiveFontSizes(
         dark: "#000051",
       },
       secondary: {
-        main: pink["A100"],
-        light: "#ff79b0",
-        dark: "#c60055",
+        main: pink["A100"] || "#ff80ab",
+        light: "#ffb2dd",
+        dark: "#c94f7c",
       },
       text: {
         primary: "#212121",
