@@ -14,8 +14,8 @@ import React from "react"
 const useStyles = makeStyles(theme => ({
   text: {
     "@media (min-width:1280px)": {
-      textAlign: "left",
-      marginLeft: "8rem",
+      textAlign: (props) => props.center ? "center" : "left",
+      marginLeft: (props) => props.center ? "0rem" : "8rem",
     },
   },
   h2: {
@@ -43,8 +43,8 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const TextBox = ({ title, subtitle, bodyText, className }) => {
-  const classes = useStyles()
+const TextBox = ({ title, subtitle, bodyText, center }) => {
+  const classes = useStyles({center})
   return (
     <Box
       display="flex"
