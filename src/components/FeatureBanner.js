@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
       paddingBottom: "4rem",
       paddingTop: "4rem",
       margin: "5rem",
+      marginBottom: "2rem",
       marginTop: "0rem",
       flexDirection: "row",
       alignItems: "center",

@@ -9,16 +9,20 @@
  */
 
 import { MuiThemeProvider } from "@material-ui/core"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import Features from "../templates/Features"
+import { Helmet } from "react-helmet"
+import { FiArrowRight } from "react-icons/fi"
+import { RESUMINATOR_FEATURES } from "../components/Constants"
+import Contribute from "../components/ContributeCard"
+import CustomButton from "../components/CustomButton"
+import FeatureBanner from "../components/FeatureBanner"
+import FeatureBannerCenter from "../components/FeatureBannerCenter"
 import Footer from "../components/Footer"
 import MastHead from "../components/MastHead"
-import { theme } from "../styles/theme"
-import { Helmet } from "react-helmet"
 import MenuBar from "../components/MenuBar"
-import Contribute from "../components/ContributeCard"
-import FeatureBanner from "../components/FeatureBanner"
-import { graphql, useStaticQuery } from "gatsby"
+import { theme } from "../styles/theme"
+import Features from "../templates/Features"
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -55,6 +59,13 @@ export default function Home() {
           bodyText="Bring the ease of working with Markdown and style your resume with bullet points, headings and subheadings, math - whatever you want!"
           data={data}
         />
+        <FeatureBannerCenter>
+          <CustomButton
+            endIcon={<FiArrowRight />}
+            buttonText="✨ Explore more features"
+            link={RESUMINATOR_FEATURES}
+          />
+        </FeatureBannerCenter>
         <Contribute />
         <Footer />
       </MuiThemeProvider>

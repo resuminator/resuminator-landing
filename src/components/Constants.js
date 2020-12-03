@@ -18,3 +18,4 @@ export const RESUMINATOR_ISSUES_GFI =
   "https://github.com/viveknigam3003/resuminator/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22"
 export const EARLY_ACCESS_TYPEFORM = "https://form.typeform.com/to/WbWsPpSB"
 export const FORMSPREE_ACTION_LINK = "https://formspree.io/f/xpzordgp"
+export const RESUMINATOR_FEATURES = "https://github.com/viveknigam3003/resuminator#-features"
