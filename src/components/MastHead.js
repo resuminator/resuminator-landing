@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width:1280px)": {
       fontSize: "2rem",
     },
-    color: theme.palette.secondary.light,
+    color: theme.palette.secondary.main,
     fontWeight: 400,
   },
   button: {

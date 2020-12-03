@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: "0.5rem",
   },
   links: {
-    color: theme.palette.secondary.dark,
+    color: theme.palette.primary.light,
     textDecoration: "none",
     wordWrap: "break-word"
   },
