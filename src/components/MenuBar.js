@@ -55,6 +55,9 @@ const useStyles = makeStyles(theme => ({
     marginLeft: "0.2rem",
     marginRight: "0.2rem",
   },
+  btnText: {
+    fontFamily: "Karla",
+  }
 }))
 
 function MenuBar() {
@@ -113,14 +116,15 @@ function MenuBar() {
         </ButtonGroup>
         <Button
           size="medium"
-          variant="outlined"
+          variant="contained"
           className={classes.btn}
           color="primary"
-          disabled
+          href="https://resuminator.vercel.app/"
+          disableElevation
         >
-          <Typography>Log in</Typography>
+          <Typography className={classes.btnText}>Log in</Typography>
         </Button>
-        <Button
+        {/* <Button
           size="medium"
           variant="text"
           className={classes.btn}
@@ -128,7 +132,7 @@ function MenuBar() {
           disabled
         >
           <Typography>Sign Up</Typography>
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   )
