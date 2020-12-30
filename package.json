@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "resuminator",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Resuminator - Build beautiful single-page resumes; without the hassle",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "GPLv3",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
