@@ -7,11 +7,10 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Resuminator`,
+    title: `Resuminator | Build Beautiful Single-Page Resumes`,
     url: `https://www.resuminator.in`,
     description: `Build beautiful single-page resumes; without the hassle!`,
-    titleTemplate: `%s | Resuminator`,
-    image: "/images/gatsby-icon.png"
+    image: "/images/Link-Image.png"
   },
   /* Your site config here */
   plugins: [

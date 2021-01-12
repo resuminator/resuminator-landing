@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-const Meta = () => {
+const Meta = ({data}) => {
   return (
     <Helmet title="Resuminator | Beautiful Single-Page Resumes">
       <meta
@@ -23,7 +23,7 @@ const Meta = () => {
         property="og:description"
         content="Build beautiful single-page resumes; without the hassle! Enter your details quickly and download an awesome single-page resume in minutes! 🤩"
       />
-      <meta property="og:image" content="/images/Link-Image.png" />
+      <meta property="og:image" content={data.meta.childImageSharp.fixed} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://resuminator.in/" />
@@ -35,7 +35,7 @@ const Meta = () => {
         property="twitter:description"
         content="Build beautiful single-page resumes; without the hassle! Enter your details quickly and download an awesome single-page resume in minutes! 🤩"
       />
-      <meta property="twitter:image" content="/images/Link-Image.png"></meta>
+      <meta property="twitter:image" content={data.meta.childImageSharp.fixed}></meta>
     </Helmet>
   )
 }

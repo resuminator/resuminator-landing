@@ -21,7 +21,6 @@ import Footer from "../components/Footer"
 import MastHead from "../components/MastHead"
 import MenuBar from "../components/MenuBar"
 import Meta from "../components/Meta"
-import SEO from "../components/SEO"
 import { theme } from "../styles/theme"
 import Features from "../templates/Features"
 
@@ -36,13 +35,20 @@ export default function Home() {
           }
         }
       }
+      meta: file(relativePath: { eq: "Link-Image.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 240) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
     }
   `)
 
   return (
     <React.Fragment>
-      <Meta/>
-      <SEO/>
+      <Meta data={data}/>
       <MuiThemeProvider theme={theme}>
         <MenuBar />
         <MastHead />
