@@ -8,7 +8,7 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: `Resuminator | Build Beautiful Single-Page Resumes`,
-    url: `https://www.resuminator.in`,
+    siteUrl: `https://www.resuminator.in`,
     description: `Build beautiful single-page resumes; without the hassle!`,
     image: "/images/Link-Image.png",
     siteLanguage: `en-US`,
@@ -49,12 +49,7 @@ module.exports = {
         background_color: "#fffafa",
         theme_color: "#1a237e",
         icon: "./src/images/gatsby-icon.png",
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
-        // An optional attribute which provides support for CORS check.
-        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
-        // Any invalid keyword or empty string defaults to `anonymous`
         crossOrigin: `use-credentials`,
       },
     },
@@ -74,9 +69,6 @@ module.exports = {
           ],
         },
         formats: ["woff2", "woff"],
-        //useMinify: true,
-        //usePreload: true,
-        //usePreconnect: false,
       },
     },
   ],
