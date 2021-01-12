@@ -10,7 +10,10 @@ module.exports = {
     title: `Resuminator | Build Beautiful Single-Page Resumes`,
     url: `https://www.resuminator.in`,
     description: `Build beautiful single-page resumes; without the hassle!`,
-    image: "/images/Link-Image.png"
+    image: "/images/Link-Image.png",
+    siteLanguage: `en-US`,
+    siteLocale: `en_us`,
+    authorName: `Vivek Nigam`,
   },
   /* Your site config here */
   plugins: [
@@ -19,6 +22,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-theme-material-ui`,
       options: {
@@ -68,7 +73,7 @@ module.exports = {
             },
           ],
         },
-        formats: ['woff2', 'woff'],
+        formats: ["woff2", "woff"],
         //useMinify: true,
         //usePreload: true,
         //usePreconnect: false,
