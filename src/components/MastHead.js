@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     "@media (min-width:1280px)": {
       margin: "8rem",
       marginTop: "6rem",
-      marginBottom: "6rem"
+      marginBottom: "6rem",
     },
   },
   title: {
@@ -49,14 +49,14 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     padding: "0.8rem",
-    marginTop: "2rem",
+    margin: "1rem 0 2rem 0",
   },
   button2: {
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
     padding: "0.8rem",
-    marginTop: "2rem",
+    margin: "1rem 0 2rem 0",
   },
   buttonText: {
     fontFamily: "Karla",
@@ -71,6 +71,17 @@ const useStyles = makeStyles(theme => ({
       width: "50%",
     },
   },
+  message: {
+    paddingLeft: "0.4rem",
+    marginTop: "2rem",
+    fontFamily: "Karla",
+    fontWeight: 700,
+    letterSpacing: "-0.05rem",
+    color: theme.palette.primary.light,
+    [theme.breakpoints.up("sm")]: {
+      width: "50%",
+    },
+  },
 }))
 
 function MastHead() {
@@ -78,20 +89,20 @@ function MastHead() {
   const [openForm, setOpenForm] = useState(false)
 
   useEffect(() => {
-    if(typeof window != `undefined`){
-      const typeForm = typeformEmbed.makePopup(
-        EARLY_ACCESS_TYPEFORM,
-        {
-          mode: "drawer_right",
-          hideFooter: true,
-          hideHeaders: true,
-          opacity: 0,
-          onSubmit: () => {typeForm.close(); setOpenForm(false)},
-          onClose: () => setOpenForm(false)
-        }
-      )
+    if (typeof window != `undefined`) {
+      const typeForm = typeformEmbed.makePopup(EARLY_ACCESS_TYPEFORM, {
+        mode: "drawer_right",
+        hideFooter: true,
+        hideHeaders: true,
+        opacity: 0,
+        onSubmit: () => {
+          typeForm.close()
+          setOpenForm(false)
+        },
+        onClose: () => setOpenForm(false),
+      })
 
-      if(openForm){
+      if (openForm) {
         typeForm.open()
       }
     }
@@ -124,6 +135,13 @@ function MastHead() {
           support which guides you towards building an effective and powerful
           resumes for a great first-impression.
         </Typography>
+        <Typography variant="body1" className={classes.message}>
+          Resuminator is currently in Beta. Join the waitlist to get your
+          exclusive account!{" "}
+          <span aria-label="tada" role="img">
+            🎉
+          </span>
+        </Typography>
         <ButtonGroup>
           <Button
             size="large"
@@ -139,7 +157,7 @@ function MastHead() {
               variant="body1"
               color="textSecondary"
             >
-              Request Early Access
+              Join the waitlist
             </Typography>
           </Button>
           <Button
