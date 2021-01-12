@@ -35,20 +35,12 @@ export default function Home() {
           }
         }
       }
-      meta: file(relativePath: { eq: "Link-Image.png" }) {
-        id
-        childImageSharp {
-          fixed(width: 240) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
     }
   `)
 
   return (
     <React.Fragment>
-      <Meta data={data}/>
+      <Meta />
       <MuiThemeProvider theme={theme}>
         <MenuBar />
         <MastHead />

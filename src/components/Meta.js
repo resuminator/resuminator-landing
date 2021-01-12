@@ -1,7 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-const Meta = ({data}) => {
+const Meta = () => {
+  const socialBanner =
+    "https://user-images.githubusercontent.com/30192068/104317081-6f917a80-5503-11eb-95e5-5e1dcfcfbae0.png"
   return (
     <Helmet title="Resuminator | Beautiful Single-Page Resumes">
       <meta
@@ -23,7 +25,7 @@ const Meta = ({data}) => {
         property="og:description"
         content="Build beautiful single-page resumes; without the hassle! Enter your details quickly and download an awesome single-page resume in minutes! 🤩"
       />
-      <meta property="og:image" content={data.meta.childImageSharp.fixed} />
+      <meta property="og:image" content={socialBanner} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://resuminator.in/" />
@@ -35,7 +37,7 @@ const Meta = ({data}) => {
         property="twitter:description"
         content="Build beautiful single-page resumes; without the hassle! Enter your details quickly and download an awesome single-page resume in minutes! 🤩"
       />
-      <meta property="twitter:image" content={data.meta.childImageSharp.fixed}></meta>
+      <meta property="twitter:image" content={socialBanner}></meta>
     </Helmet>
   )
 }
