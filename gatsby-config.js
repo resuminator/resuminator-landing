@@ -8,8 +8,10 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: `Resuminator`,
-    siteUrl: `https://www.resuminator.gtsb.io`,
-    description: `Build beautiful single-page resumes`,
+    url: `https://www.resuminator.in`,
+    description: `Build beautiful single-page resumes; without the hassle!`,
+    titleTemplate: `%s | Resuminator`,
+    image: "/images/gatsby-icon.png"
   },
   /* Your site config here */
   plugins: [
@@ -17,6 +19,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-theme-material-ui`,
       options: {

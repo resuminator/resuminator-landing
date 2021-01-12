@@ -11,7 +11,6 @@
 import { MuiThemeProvider } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { Helmet } from "react-helmet"
 import { FiArrowRight } from "react-icons/fi"
 import { RESUMINATOR_FEATURES } from "../components/Constants"
 import Contribute from "../components/ContributeCard"
@@ -21,6 +20,7 @@ import FeatureBannerCenter from "../components/FeatureBannerCenter"
 import Footer from "../components/Footer"
 import MastHead from "../components/MastHead"
 import MenuBar from "../components/MenuBar"
+import SEO from "../components/SEO"
 import { theme } from "../styles/theme"
 import Features from "../templates/Features"
 
@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      <Helmet>
+      {/* <Helmet>
         <meta charSet="utf-8 " />
         <meta
           name="Description"
@@ -48,7 +48,8 @@ export default function Home() {
         />
         <title>Resuminator | Beautiful Single Page Resumes</title>
         <html lang="en" />
-      </Helmet>
+      </Helmet> */}
+      <SEO/>
       <MuiThemeProvider theme={theme}>
         <MenuBar />
         <MastHead />
