@@ -33,9 +33,11 @@ const useStyles = makeStyles(theme => ({
     marginTop: "0.5rem",
   },
   links: {
-    color: theme.palette.primary.light,
-    textDecoration: "none",
-    wordWrap: "break-word"
+    color: theme.palette.primary.main,
+    textDecoration: "underline",
+    wordWrap: "break-word",
+    textDecorationColor: theme.palette.secondary.main,
+    textDecorationThickness: "3px"
   },
   paper: {
     display: "flex",
@@ -57,17 +59,17 @@ function Features() {
   const classes = useStyles()
 
   const pageLink = (
-    <React.Fragment>
+    <div>
       Powered by a strong developer and designer community. Find it on {<a
-          className={classes.links}
           href="https://github.com/viveknigam3003/resuminator"
+          className={classes.links}
           target="_blank"
           rel="noreferrer"
         >
-          viveknigam3003/resuminator
+          Resuminator Github Repo
         </a>
        }
-    </React.Fragment>
+    </div>
   )
 
   const tiles = [

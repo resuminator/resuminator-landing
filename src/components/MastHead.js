@@ -129,7 +129,7 @@ function MastHead() {
         </Typography>
         <Typography variant="subtitle1" className={classes.text}>
           Resuminator enables you to build and manage multiple resumes with{" "}
-          <Link to="https://en.wikipedia.org/wiki/Lint_(software)">
+          <Link href="https://en.wikipedia.org/wiki/Lint_(software)">
             linting
           </Link>{" "}
           support which guides you towards building an effective and powerful

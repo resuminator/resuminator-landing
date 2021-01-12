@@ -36,6 +36,7 @@ const CustomButton = ({ startIcon, endIcon, link, buttonText }) => {
       endIcon={endIcon}
       href={link}
       target="_blank"
+      rel="noreferrer"
     >
       <Typography className={classes.text} variant="subtitle1" color="inherit">
         {buttonText}

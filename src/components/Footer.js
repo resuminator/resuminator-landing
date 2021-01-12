@@ -76,7 +76,7 @@ function Footer() {
           className={classes.copyright}
         >
           Copyright &copy; {new Date().getFullYear()}{" "}
-          <a className={classes.links} href={OWNER_PROFILE}>
+          <a href={OWNER_PROFILE} className={classes.links}>
             Vivek Nigam
           </a>{" "}
         </Typography>
