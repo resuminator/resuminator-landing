@@ -26,19 +26,17 @@ const SEO = ({ title, description, image, article }) => {
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <script type="application/ld+json">
-        {`
-        {
-          "@context": "https://schema.org",
-          "@type": "Company",
-          "url": "https://resuminator.in",
-          "name": "Resuminator",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "viveknigam.nigam3@gmail.com",
-            "contactType": "Customer Support"
-          }
-        }
-      `}
+        {`{
+            "@context": "https://schema.org",
+            "@type": "Company",
+            "url": "https://resuminator.in",
+            "name": "Resuminator",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "viveknigam.nigam3@gmail.com",
+                "contactType": "Customer Support"
+                }
+            }`}
       </script>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />

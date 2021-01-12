@@ -20,6 +20,7 @@ import FeatureBannerCenter from "../components/FeatureBannerCenter"
 import Footer from "../components/Footer"
 import MastHead from "../components/MastHead"
 import MenuBar from "../components/MenuBar"
+import Meta from "../components/Meta"
 import SEO from "../components/SEO"
 import { theme } from "../styles/theme"
 import Features from "../templates/Features"
@@ -40,15 +41,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      {/* <Helmet>
-        <meta charSet="utf-8 " />
-        <meta
-          name="Description"
-          content="Build effective and beautiful single page resumes with powerful linting support."
-        />
-        <title>Resuminator | Beautiful Single Page Resumes</title>
-        <html lang="en" />
-      </Helmet> */}
+      <Meta/>
       <SEO/>
       <MuiThemeProvider theme={theme}>
         <MenuBar />
