@@ -28,7 +28,7 @@ const SEO = ({ title, description, image, article }) => {
       <script type="application/ld+json">
         {`
         {
-          "@context": "https://resuminator.in",
+          "@context": "https://schema.org",
           "@type": "Company",
           "url": "https://resuminator.in",
           "name": "Resuminator",
