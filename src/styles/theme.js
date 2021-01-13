@@ -15,7 +15,7 @@ import pink from "@material-ui/core/colors/pink"
 export const theme = responsiveFontSizes(
   createMuiTheme({
     typography: {
-      fontFamily: "Roboto",
+      fontFamily: "Inter",
     },
     spacing: 8,
     palette: {
@@ -30,7 +30,8 @@ export const theme = responsiveFontSizes(
         dark: "#c94f7c",
       },
       text: {
-        primary: "#212121",
+        primary: "#0F1020",
+        dark: "#17183B",
         secondary: "#919DF2",
       },
       contrast: {
