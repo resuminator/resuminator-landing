@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   h2: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     fontWeight: 700,
     letterSpacing: "-0.2rem",
     color: theme.palette.secondary.dark,
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   subtitle: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     letterSpacing: "-0.1rem",
     color: theme.palette.grey[400],
   },

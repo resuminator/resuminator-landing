@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.primary.dark,
   },
   subtext: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     letterSpacing: "-0.05rem",
     paddingTop: "2rem",
   },
@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: "2rem",
   },
   buttonText: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     fontWeight: 700,
     textTransform: "none",
   },

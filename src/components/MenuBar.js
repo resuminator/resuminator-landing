@@ -19,7 +19,7 @@ import React from "react"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     color: theme.palette.text.primary,
     "@media (min-width:1280px)": {
       margin: "6.5rem",
@@ -50,13 +50,13 @@ const useStyles = makeStyles(theme => ({
     marginRight: "0.2rem",
   },
   optionBtn: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     textTransform: "none",
     marginLeft: "0.2rem",
     marginRight: "0.2rem",
   },
   btnText: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
   }
 }))
 

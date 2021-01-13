@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   logo: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     paddingBottom: "3rem",
     fontSize: "2rem",
     color: theme.palette.grey[400],
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     width:"175px"
   },
   title: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     fontWeight: 700,
     fontSize:"6rem",
     color: theme.palette.secondary.light,
@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
   btnText: {
     fontSize: "1.2rem",
     textTransform: "none",
-    fontFamily: "Karla"
+    fontFamily: "Manrope"
   }
 }))
 
