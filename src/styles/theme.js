@@ -33,6 +33,7 @@ export const theme = responsiveFontSizes(
         primary: "#0F1020",
         dark: "#17183B",
         secondary: "#919DF2",
+        light: "#DDF0FF",
       },
       contrast: {
         main: "#e0e0e0",
