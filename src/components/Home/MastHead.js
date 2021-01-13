@@ -10,14 +10,13 @@
 
 import { Box, makeStyles } from "@material-ui/core"
 import * as typeformEmbed from "@typeform/embed"
-import { graphql, useStaticQuery } from "gatsby"
 import React, { useEffect, useState } from "react"
-import Image from "../common/Image"
 import { EARLY_ACCESS_TYPEFORM } from "../Constants"
 import ActionButton from "./ActionButtons"
+import ResumePreview from "./ResumePreview"
 import TitleText from "./TitleText"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
     fontFamily: "Inter",
     "@media (min-width:1280px)": {
@@ -26,7 +25,7 @@ const useStyles = makeStyles(theme => ({
       marginBottom: "6rem",
     },
   },
-}))
+})
 
 function MastHead() {
   const classes = useStyles()
@@ -52,19 +51,6 @@ function MastHead() {
     }
   }, [openForm])
 
-  const data = useStaticQuery(graphql`
-    query Image {
-      file(relativePath: { eq: "cherry-563.png" }) {
-        id
-        childImageSharp {
-          fixed(width: 360) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <React.Fragment>
       <Box
@@ -78,12 +64,7 @@ function MastHead() {
       >
         <TitleText />
         <ActionButton onClick={() => setOpenForm(true)} />
-        <Image
-          alt="Splash"
-          data={data}
-          author="Maria Shukshina"
-          source="Icons8"
-        />
+        <ResumePreview />
       </Box>
     </React.Fragment>
   )
