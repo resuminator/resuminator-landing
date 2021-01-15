@@ -22,7 +22,7 @@ export const InputHeader = ({ heading, subtitle }) => {
   const classes = useStyles();
   return (
     <Box p={2} pt={8}>
-      <Typography color="primary" variant="body1" className={section.inputHeading}>
+      <Typography color="primary" variant="body1" className={`${classes.heading} ${section.inputHeading}`}>
         {heading}
       </Typography>
       <Typography

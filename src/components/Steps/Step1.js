@@ -5,13 +5,15 @@ import {
   TextField,
   Typography,
 } from "@material-ui/core"
-import { red } from "@material-ui/core/colors"
 import React, { useState } from "react"
 import { InView } from "react-intersection-observer"
 import section from "../../styles/section.module.css"
 import { InputHeader } from "../common/InputHeader"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+  heading: {
+    color: theme.palette.text.dark
+  },
   textField: {
     margin: "1rem",
     width: "14rem",
@@ -22,23 +24,11 @@ const useStyles = makeStyles({
       width: "20rem",
     },
   },
-})
+}))
 
-const Step1 = () => {
+const Step1 = ({typewriter}) => {
   const classes = useStyles()
   const [name, setName] = useState("")
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
-  }
-
-  async function typewriter(string) {
-    const typeArray = string.split("")
-    for (let i = 0; i < typeArray.length; ++i) {
-      setName(nextName => nextName.concat(typeArray[i]))
-      await sleep(200 / (1.1 * i))
-    }
-  }
 
   return (
     <Box className={section.step}>
@@ -46,7 +36,7 @@ const Step1 = () => {
         <Typography variant="overline" className={section.overline}>
           Step 1
         </Typography>
-        <Typography variant="h2" className={section.heading}>
+        <Typography variant="h2" className={`${classes.heading} ${section.heading}`}>
           Add your details
         </Typography>
         <Typography variant="body1" className={section.body1}>
@@ -63,9 +53,9 @@ const Step1 = () => {
           />
           <InView
             as="div"
-            threshold={0.8}
+            threshold={0.5}
             onChange={inView =>
-              inView ? typewriter("Vivek Nigam") : setName("")
+              inView ? typewriter("Vivek Nigam", setName) : setName("")
             }
           >
             <TextField
