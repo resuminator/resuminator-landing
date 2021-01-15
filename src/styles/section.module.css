@@ -1,0 +1,124 @@
+.step {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    font-family: "Inter";
+}
+
+.overline {
+    font-size: 1rem !important;
+    padding: 0 0 0 0.1rem !important;
+    font-family: "Manrope" !important;
+    font-weight: 700 !important;
+}
+
+.heading {
+    padding: 0 0 1rem 0 !important;
+    font-family: "Manrope" !important;
+    font-weight: 700 !important;
+    letter-spacing: -2px !important;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: #FF4F79;
+    text-decoration-thickness: 4px;
+}
+
+.body1 {
+    padding: 0 0 1rem 0.1rem !important;
+    font-family: "Inter" !important;
+    font-size: 1rem !important;
+}
+
+.left {
+    margin: 1.2rem !important;
+    width: 100%;
+}
+
+.right {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    width: 100% !important;
+    height: 26rem !important;
+    background-color: #FFB49A;
+}
+
+.inputHeading {
+    font-size: 1.2rem !important;
+    font-family: "Manrope" !important;
+    font-weight: 600 !important;
+}
+
+.inputSubtitle {
+    padding-top: 0.8rem !important; 
+    font-size: 0.9rem !important;
+    font-family: "Inter" !important;
+}
+
+.paper {
+    width: 16rem !important;
+    height: 20rem !important;
+    place-items: center !important;
+    place-content: center !important;
+    background-color: #fffafa;
+    border-radius: 16px !important;
+}
+
+@media only screen and (min-width: 375px) {
+    .paper {
+        width: 18rem !important;
+        height: 22rem !important;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .paper {
+        width: 22rem !important;
+        height: 26rem !important;
+    }
+    .right {
+        height: 30rem !important;
+    }
+    .inputHeading {
+        font-size: 1.6rem !important;
+    }
+    .inputSubtitle {
+        font-size: 1.0rem !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .paper {
+        width: 22rem !important;
+        height: 26rem !important;
+    }
+    .right {
+        height: 30rem !important;
+    }
+    .inputHeading {
+        font-size: 1.8rem !important;
+    }
+    .inputSubtitle {
+        font-size: 1.0rem !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .step {
+        margin-top: 8rem !important;
+    }
+    .left {
+        margin: 5rem 0rem 5rem 5rem !important;
+        width: 40% !important;
+    }
+    .right {
+        width: 50% !important;
+    }
+    .body1{
+        margin-top: 1rem !important;
+        font-size: 1.3rem !important;
+    }
+}

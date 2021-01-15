@@ -22,7 +22,7 @@ import MastHead from "../components/Home/MastHead"
 import MenuBar from "../components/Header/MenuBar"
 import Meta from "../components/Meta"
 import { theme } from "../styles/theme"
-import Features from "../templates/Features"
+import Steps from "../components/Steps/Steps"
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ export default function Home() {
       <MuiThemeProvider theme={theme}>
         <MenuBar />
         <MastHead />
-        <Features />
+        <Steps/>
         <FeatureBanner
           title="Style with Markdown"
           subtitle="Your resume, your expression"

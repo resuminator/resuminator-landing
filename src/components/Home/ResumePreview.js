@@ -21,7 +21,7 @@ const ResumePreview = () => {
         variant="h3"
         className={resume.text}
       >
-        Your awesome resume is just a few clicks away!
+        Your awesome resume is just a few steps away!
       </Typography>
     </Box>
   )
