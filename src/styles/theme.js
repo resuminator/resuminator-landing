@@ -15,12 +15,15 @@ import pink from "@material-ui/core/colors/pink"
 export const theme = responsiveFontSizes(
   createMuiTheme({
     typography: {
-      fontFamily: "Inter",
+      fontFamily: {
+        primary: "Inter",
+        secondary: "Manrope"
+      },
     },
     spacing: 8,
     palette: {
       primary: {
-        light: "#534bae",
+        light: "#4B71DB",
         main: indigo[900],
         dark: "#000051",
       },
