@@ -48,7 +48,6 @@ module.exports = {
         start_url: "/",
         background_color: "#fffafa",
         theme_color: "#1a237e",
-        icon: "./src/images/gatsby-icon.png",
         display: "standalone",
         crossOrigin: `use-credentials`,
       },
