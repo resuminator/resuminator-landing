@@ -20,18 +20,18 @@ const useStyles = makeStyles(theme => ({
 const Navigation = () => {
   const classes = useStyles()
   const options = [
-    {
-      name: "Features",
-      link: "#features",
-    },
-    {
-      name: "Pricing",
-      link: "#",
-    },
-    {
-      name: "Community",
-      link: "#",
-    },
+    // {
+    //   name: "Features",
+    //   link: "#features",
+    // },
+    // {
+    //   name: "Pricing",
+    //   link: "#",
+    // },
+    // {
+    //   name: "Community",
+    //   link: "#",
+    // },
   ]
 
   const optionButtons = (name, linkTo) => (
