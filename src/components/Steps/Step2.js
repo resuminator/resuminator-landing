@@ -2,18 +2,22 @@ import {
   Box,
   makeStyles,
   Paper,
-  TextField,
   Typography,
 } from "@material-ui/core"
 import React, { useState } from "react"
 import { InView } from "react-intersection-observer"
 import section from "../../styles/section.module.css"
-import { InputHeader } from "../common/InputHeader"
 import MotionWrapper from "./MotionWrapper"
 
 const useStyles = makeStyles(theme => ({
   heading: {
     color: theme.palette.text.dark,
+  },
+  paperHeading:{
+    color: theme.palette.text.dark,
+  },
+  paperSubtitle: {
+    color: theme.palette.primary.main,
   },
   textField: {
     margin: "1rem",
@@ -21,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Step1 = ({ typewriter }) => {
+const Step2 = ({ typewriter }) => {
   const classes = useStyles()
   const [name, setName] = useState("")
 
@@ -29,26 +33,21 @@ const Step1 = ({ typewriter }) => {
     <Box className={section.step}>
       <MotionWrapper className={section.left}>
         <Typography variant="overline" className={section.overline}>
-          Step 1
+          Step 2
         </Typography>
         <Typography
           variant="h2"
           className={`${classes.heading} ${section.heading}`}
         >
-          Add your details
+          Live preview changes
         </Typography>
-        <Typography key="body" variant="body1" className={section.body1}>
-          With a simple and intuitive{" "}
-          <span className={section.underline}>form format</span>, it has never
-          been easier to create and modify your resume details
+        <Typography variant="body1" className={section.body1}>
+          What you see is what you get (WYSIWYG). Review your changes as you
+          make them in real time!
         </Typography>
       </MotionWrapper>
       <MotionWrapper className={section.right}>
         <Paper elevation={16} className={section.paper}>
-          <InputHeader
-            heading="Let's go over some basic info"
-            subtitle=" We pulled in some information from your profile, you can edit it below."
-          />
           <InView
             as="div"
             threshold={1.0}
@@ -56,13 +55,12 @@ const Step1 = ({ typewriter }) => {
               inView ? typewriter("Vivek Nigam", setName) : setName("")
             }
           >
-            <TextField
-              label="Full Name"
-              variant="outlined"
-              size="medium"
-              className={classes.textField}
-              value={name}
-            />
+            <Typography component="div" className={`${classes.paperHeading} ${section.displayHeading}`}>
+              {name}
+            </Typography>
+            <Typography component="div" className={`${classes.paperSubtitle} ${section.displaySubtitle}`}>
+              Software Developer
+            </Typography>
           </InView>
         </Paper>
       </MotionWrapper>
@@ -70,4 +68,4 @@ const Step1 = ({ typewriter }) => {
   )
 }
 
-export default Step1
+export default Step2
