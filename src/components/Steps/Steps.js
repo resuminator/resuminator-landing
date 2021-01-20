@@ -47,7 +47,7 @@ const Steps = () => {
       case 2:
         return <Step2 typewriter={typewriter} />
       case 3:
-        return <Step3 typewriter={typewriter} />
+        return <Step3 />
       default:
         return null
     }

@@ -32,7 +32,7 @@ function MastHead() {
   const [openForm, setOpenForm] = useState(false)
 
   useEffect(() => {
-    if (typeof window != `undefined`) {
+    if (typeof window !== `undefined`) {
       const typeForm = typeformEmbed.makePopup(EARLY_ACCESS_TYPEFORM, {
         mode: "drawer_right",
         hideFooter: true,
