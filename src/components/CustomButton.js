@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     width: "16rem",
   },
   text: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     fontWeight: 700,
     textTransform: "none",
   },

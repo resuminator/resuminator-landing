@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: "2rem"
   },
   titles: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     fontWeight: 700,
     letterSpacing: "-0.1rem",
     "@media (min-width:1280px)": {
@@ -59,7 +59,7 @@ function Features() {
   const classes = useStyles()
 
   const pageLink = (
-    <div>
+    <>
       Powered by a strong developer and designer community. Find it on {<a
           href="https://github.com/viveknigam3003/resuminator"
           className={classes.links}
@@ -69,7 +69,7 @@ function Features() {
           Resuminator Github Repo
         </a>
        }
-    </div>
+    </>
   )
 
   const tiles = [

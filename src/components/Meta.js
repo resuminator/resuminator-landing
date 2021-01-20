@@ -5,10 +5,10 @@ const Meta = () => {
   const socialBanner =
     "https://user-images.githubusercontent.com/30192068/104317081-6f917a80-5503-11eb-95e5-5e1dcfcfbae0.png"
   return (
-    <Helmet title="Resuminator | Beautiful Single-Page Resumes">
+    <Helmet title="Resuminator: Beautiful Single-Page Resumes">
       <meta
         name="title"
-        content="Resuminator | Beautiful Single-Page Resumes"
+        content="Resuminator: Beautiful Single-Page Resumes"
       />
       <meta
         name="description"
@@ -19,7 +19,7 @@ const Meta = () => {
       <meta property="og:url" content="https://resuminator.in/" />
       <meta
         property="og:title"
-        content="Resuminator | Beautiful Single-Page Resumes"
+        content="Resuminator: Beautiful Single-Page Resumes"
       />
       <meta
         property="og:description"
@@ -31,7 +31,7 @@ const Meta = () => {
       <meta property="twitter:url" content="https://resuminator.in/" />
       <meta
         property="twitter:title"
-        content="Resuminator | Beautiful Single-Page Resumes"
+        content="Resuminator: Beautiful Single-Page Resumes"
       />
       <meta
         property="twitter:description"

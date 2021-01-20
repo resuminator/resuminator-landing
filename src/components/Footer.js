@@ -36,10 +36,10 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     fontWeight: 400,
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
   },
   subtext: {
-    fontFamily: "Roboto",
+    fontFamily: "Inter",
     fontWeight: 400,
     margin: "2rem",
     marginLeft: "0rem",

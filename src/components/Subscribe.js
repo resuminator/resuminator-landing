@@ -14,7 +14,7 @@ import { FORMSPREE_ACTION_LINK } from "./Constants"
 
 const useStyles = makeStyles(theme => ({
   textField: {
-    fontFamily: "Karla",
+    fontFamily: "Manrope",
     color: theme.palette.contrast.main,
   },
 
