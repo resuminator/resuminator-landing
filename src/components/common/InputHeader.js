@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
 export const InputHeader = ({ heading, subtitle }) => {
   const classes = useStyles();
   return (
-    <Box p={2} pt={8}>
+    <Box p={2}>
       <Typography color="primary" variant="body1" className={`${classes.heading} ${section.inputHeading}`}>
         {heading}
       </Typography>
