@@ -12,12 +12,12 @@ import { Box, Button, makeStyles, Paper, Typography } from "@material-ui/core"
 import { grey } from "@material-ui/core/colors"
 import React from "react"
 import { FiAlertCircle, FiArrowRight } from "react-icons/fi"
-import {RESUMINATOR_ISSUES_GFI} from "./Constants"
+import { RESUMINATOR_ISSUES_GFI } from "./Constants"
 
 const useStyles = makeStyles(theme => ({
   root: {
     borderRadius: "1rem",
-    backgroundColor: grey[50],
+    backgroundColor: grey[100],
     padding: "2.5rem",
     margin: "2rem",
     marginTop: "0rem",
@@ -29,14 +29,18 @@ const useStyles = makeStyles(theme => ({
       marginTop: "0rem",
     },
   },
+  h2: {
+    letterSpacing: -2,
+  },
   logo: {
-    fontWeight: 500,
-    letterSpacing: "-0.2rem",
+    fontFamily: "Karla",
+    fontWeight: 700,
+    letterSpacing: -4,
     color: theme.palette.primary.dark,
   },
   subtext: {
-    fontFamily: "Manrope",
-    letterSpacing: "-0.05rem",
+    fontFamily: "Inter",
+    letterSpacing: -1,
     paddingTop: "2rem",
   },
   button: {
@@ -58,36 +62,34 @@ const useStyles = makeStyles(theme => ({
 function Contribute() {
   const classes = useStyles()
   return (
-    <Box>
-      <Paper className={classes.root} elevation={1}>
-        <Typography variant="h2" className={classes.h2}>
-          <span className={classes.logo}>Resuminator</span> is a community
-          driven software.
-        </Typography>
-        <Typography className={classes.subtext} component="h3" variant="h5">
-          An amazing developer and designer community works towards making
-          Resuminator better each day. Help us make it better for everyone!
-        </Typography>
-        <Button
-          className={classes.button}
-          variant="outlined"
-          color="primary"
-          size="large"
-          startIcon={<FiAlertCircle />}
-          endIcon={<FiArrowRight />}
-          href={RESUMINATOR_ISSUES_GFI}
+    <Paper component="div" className={classes.root} elevation={1}>
+      <Typography variant="h2" className={classes.h2}>
+        <span className={classes.logo}>Resuminator</span> is a community driven
+        software.
+      </Typography>
+      <Typography className={classes.subtext} component="h3" variant="h5">
+        An amazing developer and designer community works towards making
+        Resuminator better each day. Help us make it better for everyone!
+      </Typography>
+      <Button
+        className={classes.button}
+        variant="outlined"
+        color="primary"
+        size="large"
+        startIcon={<FiAlertCircle />}
+        endIcon={<FiArrowRight />}
+        href={RESUMINATOR_ISSUES_GFI}
+      >
+        <Typography
+          className={classes.buttonText}
+          variant="subtitle1"
+          color="inherit"
         >
-          <Typography
-            className={classes.buttonText}
-            variant="subtitle1"
-            color="inherit"
-          >
-            {" "}
-            Find issues to solve
-          </Typography>
-        </Button>
-      </Paper>
-    </Box>
+          {" "}
+          Find issues to solve
+        </Typography>
+      </Button>
+    </Paper>
   )
 }
 
