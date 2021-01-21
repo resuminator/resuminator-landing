@@ -1,11 +1,5 @@
-import {
-  Box,
-  makeStyles,
-  Paper,
-  Typography,
-} from "@material-ui/core"
-import React, { useState } from "react"
-import { InView } from "react-intersection-observer"
+import { Box, makeStyles, Paper, Typography } from "@material-ui/core"
+import React, { useEffect, useState } from "react"
 import section from "../../styles/section.module.css"
 import MotionWrapper from "./MotionWrapper"
 
@@ -13,7 +7,7 @@ const useStyles = makeStyles(theme => ({
   heading: {
     color: theme.palette.text.dark,
   },
-  paperHeading:{
+  paperHeading: {
     color: theme.palette.text.dark,
   },
   paperSubtitle: {
@@ -29,9 +23,14 @@ const Step2 = ({ typewriter }) => {
   const classes = useStyles()
   const [name, setName] = useState("")
 
+  useEffect(() => {
+    typewriter("Vivek Nigam", setName)
+    return () => typewriter("", setName)
+  }, [typewriter])
+
   return (
-    <Box className={section.step}>
-      <MotionWrapper className={section.left}>
+    <MotionWrapper className={section.step}>
+      <Box className={section.left}>
         <Typography variant="overline" className={section.overline}>
           Step 2
         </Typography>
@@ -45,26 +44,24 @@ const Step2 = ({ typewriter }) => {
           What you see is what you get (WYSIWYG). Review your changes as you
           make them in real time!
         </Typography>
-      </MotionWrapper>
-      <MotionWrapper className={section.right}>
+      </Box>
+      <Box className={section.right}>
         <Paper elevation={16} className={section.paper}>
-          <InView
-            as="div"
-            threshold={1.0}
-            onChange={inView =>
-              inView ? typewriter("Vivek Nigam", setName) : setName("")
-            }
+          <Typography
+            component="div"
+            className={`${classes.paperHeading} ${section.displayHeading}`}
           >
-            <Typography component="div" className={`${classes.paperHeading} ${section.displayHeading}`}>
-              {name}
-            </Typography>
-            <Typography component="div" className={`${classes.paperSubtitle} ${section.displaySubtitle}`}>
-              Software Developer
-            </Typography>
-          </InView>
+            {name}
+          </Typography>
+          <Typography
+            component="div"
+            className={`${classes.paperSubtitle} ${section.displaySubtitle}`}
+          >
+            Software Developer
+          </Typography>
         </Paper>
-      </MotionWrapper>
-    </Box>
+      </Box>
+    </MotionWrapper>
   )
 }
 

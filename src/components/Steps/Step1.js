@@ -5,8 +5,7 @@ import {
   TextField,
   Typography,
 } from "@material-ui/core"
-import React, { useState } from "react"
-import { InView } from "react-intersection-observer"
+import React, { useEffect, useState } from "react"
 import section from "../../styles/section.module.css"
 import { InputHeader } from "../common/InputHeader"
 import MotionWrapper from "./MotionWrapper"
@@ -25,9 +24,15 @@ const Step1 = ({ typewriter }) => {
   const classes = useStyles()
   const [name, setName] = useState("")
 
+  useEffect(() => {
+    typewriter("Vivek Nigam", setName)
+
+    return () => typewriter("", setName)
+  }, [typewriter])
+
   return (
-    <Box className={section.step}>
-      <MotionWrapper className={section.left}>
+    <MotionWrapper className={section.step}>
+      <Box className={section.left}>
         <Typography variant="overline" className={section.overline}>
           Step 1
         </Typography>
@@ -42,31 +47,23 @@ const Step1 = ({ typewriter }) => {
           <span className={section.underline}>form format</span>, it has never
           been easier to create and modify your resume details
         </Typography>
-      </MotionWrapper>
-      <MotionWrapper className={section.right}>
+      </Box>
+      <Box className={section.right}>
         <Paper elevation={16} className={section.paper}>
           <InputHeader
             heading="Let's go over some basic info"
             subtitle=" We pulled in some information from your profile, you can edit it below."
           />
-          <InView
-            as="div"
-            threshold={1.0}
-            onChange={inView =>
-              inView ? typewriter("Vivek Nigam", setName) : setName("")
-            }
-          >
-            <TextField
-              label="Full Name"
-              variant="outlined"
-              size="medium"
-              className={classes.textField}
-              value={name}
-            />
-          </InView>
+          <TextField
+            label="Full Name"
+            variant="outlined"
+            size="medium"
+            className={classes.textField}
+            value={name}
+          />
         </Paper>
-      </MotionWrapper>
-    </Box>
+      </Box>
+    </MotionWrapper>
   )
 }
 

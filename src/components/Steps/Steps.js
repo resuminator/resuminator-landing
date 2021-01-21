@@ -1,5 +1,5 @@
 import { IconButton, makeStyles } from "@material-ui/core"
-import { motion, AnimateSharedLayout } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import React, { useEffect, useState } from "react"
 import { GiCircle, GiPlainCircle } from "react-icons/gi"
 import Step1 from "./Step1"
@@ -26,8 +26,8 @@ const Steps = () => {
   const [step, setStep] = useState(1)
   const TOTAL_STEPS = 3
 
-  useEffect(() => {
-    const interval = setInterval(
+  const handleTimer = () => {
+    return setInterval(
       () =>
         setStep(currStep => {
           if (currStep >= TOTAL_STEPS) return 1
@@ -36,6 +36,10 @@ const Steps = () => {
         }),
       5000
     )
+  }
+
+  useEffect(() => {
+    const interval = handleTimer()
 
     return () => clearInterval(interval)
   }, [])
@@ -43,11 +47,11 @@ const Steps = () => {
   const renderSteps = stepState => {
     switch (stepState) {
       case 1:
-        return <Step1 typewriter={typewriter} />
+        return <Step1 key="step1" typewriter={typewriter} />
       case 2:
-        return <Step2 typewriter={typewriter} />
+        return <Step2 key="step2" typewriter={typewriter} />
       case 3:
-        return <Step3 />
+        return <Step3 key="step3" />
       default:
         return null
     }
@@ -61,7 +65,7 @@ const Steps = () => {
     const typeArray = string.split("")
     for (let i = 0; i < typeArray.length; ++i) {
       setState(state => state.concat(typeArray[i]))
-      await sleep(200 / (1.1 * i))
+      await sleep(400 / (1.5 * i))
     }
   }
 
@@ -83,16 +87,12 @@ const Steps = () => {
 
   return (
     <React.Fragment>
-      <AnimateSharedLayout type="switch">
-        <motion.div layout id="steps">
-          {renderSteps(step)}
-        </motion.div>
-      </AnimateSharedLayout>
-      <AnimateSharedLayout type="switch">
-        <motion.div layout layoutId="buttons" className={classes.btnGroup}>
+      <AnimatePresence exitBeforeEnter>{renderSteps(step)}</AnimatePresence>
+      <AnimatePresence>
+        <motion.div className={classes.btnGroup}>
           {[1, 2, 3].map(item => renderButton(item))}
         </motion.div>
-      </AnimateSharedLayout>
+      </AnimatePresence>
     </React.Fragment>
   )
 }
