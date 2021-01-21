@@ -11,7 +11,7 @@
 import { MuiThemeProvider } from "@material-ui/core"
 import React from "react"
 import Contribute from "../components/ContributeCard"
-import Footer from "../components/Footer"
+import Footer from "../components/Footer/Footer"
 import MenuBar from "../components/Header/MenuBar"
 import MastHead from "../components/Home/MastHead"
 import Meta from "../components/Meta"
@@ -19,17 +19,14 @@ import Steps from "../components/Steps/Steps"
 import { theme } from "../styles/theme"
 
 export default function Home() {
-
   return (
-    <React.Fragment>
+    <MuiThemeProvider theme={theme}>
       <Meta />
-      <MuiThemeProvider theme={theme}>
-        <MenuBar />
-        <MastHead />
-        <Steps/>
-        <Contribute />
-        <Footer />
-      </MuiThemeProvider>
-    </React.Fragment>
+      <MenuBar />
+      <MastHead />
+      <Steps />
+      <Contribute />
+      <Footer />
+    </MuiThemeProvider>
   )
 }

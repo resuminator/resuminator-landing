@@ -1,0 +1,140 @@
+.root {
+    bottom: 0;
+    padding: 2.5rem 2rem 4rem 2rem !important;
+    flex-wrap: wrap;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100% !important;
+}
+
+.columnList {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem !important;
+}
+
+.listItem {
+    font-family: "Inter";
+    font-size: 0.8rem !important;
+    margin-bottom: 0.1rem !important;
+    text-decoration: none;
+}
+
+.columnTitle {
+    font-family: "Manrope";
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem !important;
+}
+
+.brandName {
+    font-weight: 500;
+    font-family: "Manrope";
+    font-size: 1rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+.copyright {
+    font-family: "Inter";
+    text-align: left;
+    margin-bottom: 0.8rem !important;
+}
+
+.subtext {
+    font-size: 0.8rem !important;
+    font-family: "Inter";
+    margin-bottom: 2rem;
+    max-width: 24rem;
+}
+
+.github {
+    display: flex;
+    place-items: center;
+    font-weight: 500 !important;
+    font-family: "Inter";
+    font-size: 0.8rem !important;
+    margin-bottom: 1rem !important;
+    text-decoration: none;
+    width: 5rem !important;
+}
+
+@media only screen and (min-width: 425px) {
+    .listItem {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+    .github {
+        font-size: 0.8rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .root {
+        bottom: 0;
+        padding: 2.5rem 3rem 4rem 3rem !important;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .listItem {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+    .github {
+        font-size: 0.8rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    .root {
+        bottom: 0;
+        padding: 2.5rem 5rem 4rem 5rem !important;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .listItem {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+    .github {
+        font-size: 0.8rem !important;
+        margin-bottom: 1.4rem !important;
+    }
+    .root {
+        bottom: 0;
+        padding: 2.5rem 8rem 4rem 8rem !important;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .subtext {
+        font-size: 0.9rem !important;
+    }
+    .copyright{
+        font-size: 0.8rem !important;
+    }
+    .listItem {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    .github {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.6rem !important;
+    }
+    .root {
+        bottom: 0;
+        padding: 2.5rem 16rem 4rem 16rem !important;
+        flex-wrap: wrap;
+    }
+}
