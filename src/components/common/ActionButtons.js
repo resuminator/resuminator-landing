@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const ActionButton = ({ text, onClick }) => {
+const ActionButton = ({ text, onClick, className }) => {
   const classes = useStyles()
 
   return (
@@ -41,7 +41,7 @@ const ActionButton = ({ text, onClick }) => {
         size="large"
         color="primary"
         variant="contained"
-        className={classes.button}
+        className={`${classes.button} ${className}`}
         endIcon={<FiArrowRight color="inherit" />}
         disableElevation
         onClick={onClick}

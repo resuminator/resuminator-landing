@@ -3,7 +3,7 @@ import * as typeformEmbed from "@typeform/embed"
 import ActionButton from "../components/common/ActionButtons"
 import { EARLY_ACCESS_TYPEFORM } from "../components/Constants"
 
-const Typeform = () => {
+const Typeform = ({ className }) => {
   const [openForm, setOpenForm] = useState(false)
 
   useEffect(() => {
@@ -28,6 +28,7 @@ const Typeform = () => {
 
   return (
     <ActionButton
+      className={className}
       text="Join the Beta waitlist"
       onClick={() => setOpenForm(true)}
     />

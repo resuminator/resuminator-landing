@@ -24,9 +24,9 @@ const Banner = () => {
         variant="h2"
         className={`${classes.heading} ${styles.heading}`}
       >
-        Building <span className={styles.span}>stunning resumes</span> has never been easier!
+        Building <span className={styles.span}>stunning resumes</span> has never been easier! <span className={styles.emoji} role="img">⚡</span>
       </Typography>
-      <Typeform />
+      <Typeform className={styles.btn}/>
     </Box>
   )
 }

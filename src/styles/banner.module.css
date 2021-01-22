@@ -8,7 +8,7 @@
 
 .heading {
     letter-spacing: -1px;
-    font-size: 2rem !important;
+    font-size: 2.5rem !important;
     font-family: "Manrope";
     font-weight: 700 !important;
 }
@@ -18,4 +18,80 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.btn {
+    margin: 2.5rem 0 4rem 0 !important;
+}
+
+.emoji {
+    font-size: 1.8rem !important;
+}
+
+@media only screen and (min-width: 425px) {
+    .root {
+        padding: 3rem !important;
+    }
+    .heading {
+        font-size: 2.5rem !important;
+    }
+    .emoji {
+        font-size: 1.5rem !important;
+    }
+    .btn {
+        margin: 2rem 0 2rem 0 !important;
+        padding: 0.8rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .root {
+        padding: 4rem !important;
+    }
+    .heading {
+        font-size: 3rem !important;
+    }
+    .emoji {
+        font-size: 2rem !important;
+    }
+    .btn {
+        margin: 2rem 0 2rem 0 !important;
+        padding: 1rem !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .root {
+        padding: 6rem !important;
+    }
+    .heading {
+        font-size: 4rem !important;
+    }
+    .emoji {
+        font-size: 2.5rem !important;
+    }
+    .btn {
+        margin: 4rem 0 4rem 0 !important;
+        padding: 1rem !important;
+        font-size: 1.2rem !important;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .root {
+        padding: 8rem !important;
+    }
+    .heading {
+        font-size: 4.5rem !important;
+    }
+    .emoji {
+        font-size: 3rem !important;
+    }
+    .btn {
+        margin: 4rem 0 4rem 0 !important;
+        padding: 1rem !important;
+        font-size: 1.2rem !important;
+    }
 }
