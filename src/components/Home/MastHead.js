@@ -9,10 +9,8 @@
  */
 
 import { Box, makeStyles } from "@material-ui/core"
-import * as typeformEmbed from "@typeform/embed"
-import React, { useEffect, useState } from "react"
-import { EARLY_ACCESS_TYPEFORM } from "../Constants"
-import ActionButton from "./ActionButtons"
+import React from "react"
+import Typeform from "../../services/Typeform"
 import ResumePreview from "./ResumePreview"
 import TitleText from "./TitleText"
 
@@ -29,44 +27,21 @@ const useStyles = makeStyles({
 
 function MastHead() {
   const classes = useStyles()
-  const [openForm, setOpenForm] = useState(false)
-
-  useEffect(() => {
-    if (typeof window !== `undefined`) {
-      const typeForm = typeformEmbed.makePopup(EARLY_ACCESS_TYPEFORM, {
-        mode: "drawer_right",
-        hideFooter: true,
-        hideHeaders: true,
-        opacity: 0,
-        onSubmit: () => {
-          typeForm.close()
-          setOpenForm(false)
-        },
-        onClose: () => setOpenForm(false),
-      })
-
-      if (openForm) {
-        typeForm.open()
-      }
-    }
-  }, [openForm])
 
   return (
-    <React.Fragment>
-      <Box
-        display="flex"
-        flexDirection="column"
-        className={classes.root}
-        justify="center"
-        alignItems="center"
-        textAlign="center"
-        m={5}
-      >
-        <TitleText />
-        <ActionButton onClick={() => setOpenForm(true)} />
-        <ResumePreview />
-      </Box>
-    </React.Fragment>
+    <Box
+      display="flex"
+      flexDirection="column"
+      className={classes.root}
+      justify="center"
+      alignItems="center"
+      textAlign="center"
+      m={5}
+    >
+      <TitleText />
+      <Typeform />
+      <ResumePreview />
+    </Box>
   )
 }
 

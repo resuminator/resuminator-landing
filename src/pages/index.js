@@ -10,7 +10,7 @@
 
 import { MuiThemeProvider } from "@material-ui/core"
 import React from "react"
-import Contribute from "../components/ContributeCard"
+import Banner from "../components/Banner/Banner"
 import Footer from "../components/Footer/Footer"
 import MenuBar from "../components/Header/MenuBar"
 import MastHead from "../components/Home/MastHead"
@@ -25,7 +25,7 @@ export default function Home() {
       <MenuBar />
       <MastHead />
       <Steps />
-      <Contribute />
+      <Banner />
       <Footer />
     </MuiThemeProvider>
   )

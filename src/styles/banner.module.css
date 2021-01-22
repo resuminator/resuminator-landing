@@ -1,0 +1,21 @@
+.root {
+    padding: 2rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.heading {
+    letter-spacing: -1px;
+    font-size: 2rem !important;
+    font-family: "Manrope";
+    font-weight: 700 !important;
+}
+
+.span {
+    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
