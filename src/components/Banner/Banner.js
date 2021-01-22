@@ -1,5 +1,4 @@
 import { Box, makeStyles, Typography } from "@material-ui/core"
-import { grey } from "@material-ui/core/colors"
 import React from "react"
 import Typeform from "../../services/Typeform"
 import styles from "../../styles/banner.module.css"
@@ -24,7 +23,7 @@ const Banner = () => {
         variant="h2"
         className={`${classes.heading} ${styles.heading}`}
       >
-        Building <span className={styles.span}>stunning resumes</span> has never been easier! <span className={styles.emoji} role="img">⚡</span>
+        Building <span className={styles.span}>stunning resumes</span> has never been easier! <span className={styles.emoji} aria-label="lightning" role="img">⚡</span>
       </Typography>
       <Typeform className={styles.btn}/>
     </Box>
