@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const ActionButton = ({ onClick }) => {
+const ActionButton = ({ text, onClick }) => {
   const classes = useStyles()
 
   return (
@@ -46,7 +46,7 @@ const ActionButton = ({ onClick }) => {
         disableElevation
         onClick={onClick}
       >
-        Join the Beta waitlist
+        {text}
       </Button>
     </motion.div>
   )

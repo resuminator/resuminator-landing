@@ -40,7 +40,6 @@ const useStyles = makeStyles(theme => ({
   },
   subtext: {
     fontFamily: "Inter",
-    letterSpacing: -1,
     paddingTop: "2rem",
   },
   button: {
