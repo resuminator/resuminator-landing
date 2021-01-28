@@ -10,11 +10,12 @@ module.exports = {
     title: `Resuminator | Build Beautiful Single-Page Resumes`,
     siteUrl: `https://www.resuminator.in`,
     description: `Build beautiful single-page resumes; without the hassle!`,
-    image: "/images/Link-Image.png",
+    image: "/images/Link-Image_1.png",
     siteLanguage: `en-US`,
     siteLocale: `en_us`,
     authorName: `Vivek Nigam`,
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   /* Your site config here */
   plugins: [
     `gatsby-plugin-material-ui`,
