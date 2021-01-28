@@ -2,10 +2,13 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 const Meta = () => {
+  const date = new Date();
   const socialBanner =
     "https://user-images.githubusercontent.com/30192068/104317081-6f917a80-5503-11eb-95e5-5e1dcfcfbae0.png"
   return (
     <Helmet title="Resuminator: Beautiful Single-Page Resumes">
+      <meta name="publish_date" property="og:publish_date" content={date}/>
+      <meta name="author" content="Vivek Nigam"/>
       <meta
         name="title"
         content="Resuminator: Beautiful Single-Page Resumes"
