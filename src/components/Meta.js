@@ -31,6 +31,7 @@ const Meta = () => {
         content="Build beautiful single-page resumes; without the hassle! Enter your details quickly and download an awesome single-page resume in minutes! 🤩"
       />
       <meta name="image" property="og:image" content={socialBanner} />
+      <meta name="image" property="og:image:alt" content="Resuminator - Banner" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://resuminator.in/" />
