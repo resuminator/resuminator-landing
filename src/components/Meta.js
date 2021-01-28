@@ -3,14 +3,14 @@ import { Helmet } from "react-helmet"
 
 const Meta = () => {
   const socialBanner =
-    "https://user-images.githubusercontent.com/30192068/104317081-6f917a80-5503-11eb-95e5-5e1dcfcfbae0.png"
+    "https://user-images.githubusercontent.com/30192068/106096565-d649a180-615b-11eb-932b-7cd08eae86a9.png"
   return (
     <Helmet title="Resuminator: Beautiful Single-Page Resumes">
       <meta name="publish_date" property="og:publish_date" content="2021-01-03"/>
       <meta name="author" content="Vivek Nigam"/>
       <meta
         name="title"
-        content="Resuminator: Beautiful Single-Page Resumes"
+        content="Resuminator: Beautiful Single-Page Resumes; without the hassle!"
       />
       <meta
         name="description"
@@ -21,7 +21,7 @@ const Meta = () => {
       <meta property="og:url" content="https://resuminator.in/" />
       <meta
         property="og:title"
-        content="Resuminator: Beautiful Single-Page Resumes"
+        content="Resuminator: Beautiful Single-Page Resumes; without the hassle!"
       />
       <meta
         property="og:description"
