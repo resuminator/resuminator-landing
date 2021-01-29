@@ -8,15 +8,14 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import { Button, makeStyles } from "@material-ui/core"
-import { motion } from "framer-motion"
+import { Button, makeStyles, Typography } from "@material-ui/core"
 import React from "react"
-import { FiArrowRight } from "react-icons/fi"
+import { FiAlertTriangle } from "react-icons/fi"
 
 const useStyles = makeStyles(theme => ({
   button: {
     padding: "0.8rem",
-    margin: "1rem 0 2rem 0",
+    margin: "1rem 0 0.5rem 0",
     color: theme.palette.text.light,
     fontFamily: "Manrope",
     fontWeight: 700,
@@ -26,32 +25,35 @@ const useStyles = makeStyles(theme => ({
       color: theme.palette.secondary.light,
     },
   },
+  caption: {
+    marginBottom: "2rem",
+    color: theme.palette.primary.light,
+  },
 }))
 
-const ActionButton = ({ text, onClick, className, href, disabled }) => {
+const DisabledButton = ({ text, className, caption }) => {
   const classes = useStyles()
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.1 }}
-      whileTap={{scale: 0.9}}
-      transition={{ duration: 0.15 }}
-    >
+    <React.Fragment>
       <Button
         size="large"
         color="primary"
         variant="contained"
         className={`${classes.button} ${className}`}
-        endIcon={<FiArrowRight color="inherit" />}
+        endIcon={<FiAlertTriangle color="inherit" />}
         disableElevation
-        onClick={onClick}
-        href={href}
-        disabled={disabled}
+        disabled
       >
         {text}
       </Button>
-    </motion.div>
+      {caption ? (
+        <Typography variant="subtitle1" className={classes.caption}>
+          {caption}
+        </Typography>
+      ) : null}
+    </React.Fragment>
   )
 }
 
-export default ActionButton
+export default DisabledButton

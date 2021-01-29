@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react"
 import * as typeformEmbed from "@typeform/embed"
+import React, { useEffect, useState } from "react"
 import ActionButton from "../components/common/ActionButtons"
 import { EARLY_ACCESS_TYPEFORM } from "../components/Constants"
 
-const Typeform = ({ className }) => {
+const Typeform = ({ className, disabled }) => {
   const [openForm, setOpenForm] = useState(false)
 
   useEffect(() => {
@@ -29,8 +29,9 @@ const Typeform = ({ className }) => {
   return (
     <ActionButton
       className={className}
-      text="Join the Beta waitlist"
+      text="Beta waitlist full!"
       onClick={() => setOpenForm(true)}
+      disabled={disabled}
     />
   )
 }

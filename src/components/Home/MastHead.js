@@ -10,7 +10,7 @@
 
 import { Box, makeStyles } from "@material-ui/core"
 import React from "react"
-import Typeform from "../../services/Typeform"
+import GetStartedButton from "./GetStartedButton"
 import ResumePreview from "./ResumePreview"
 import TitleText from "./TitleText"
 
@@ -39,7 +39,7 @@ function MastHead() {
       m={5}
     >
       <TitleText />
-      <Typeform />
+      <GetStartedButton />
       <ResumePreview />
     </Box>
   )

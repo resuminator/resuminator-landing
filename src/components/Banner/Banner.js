@@ -1,7 +1,7 @@
 import { Box, makeStyles, Typography } from "@material-ui/core"
 import React from "react"
-import Typeform from "../../services/Typeform"
 import styles from "../../styles/banner.module.css"
+import GetStartedButton from "../Home/GetStartedButton"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,7 +25,7 @@ const Banner = () => {
       >
         Building <span className={styles.span}>stunning resumes</span> has never been easier! <span className={styles.emoji} aria-label="lightning" role="img">⚡</span>
       </Typography>
-      <Typeform className={styles.btn}/>
+      <GetStartedButton className={styles.btn}/>
     </Box>
   )
 }
