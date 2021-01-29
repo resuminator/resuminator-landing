@@ -1,5 +1,5 @@
 import { IconButton, makeStyles } from "@material-ui/core"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useState } from "react"
 import { GiCircle, GiPlainCircle } from "react-icons/gi"
 import Step1 from "./Step1"
@@ -62,11 +62,12 @@ const Steps = () => {
   }
 
   async function typewriter(string, setState) {
-    const typeArray = string.split("")
-    for (let i = 0; i < typeArray.length; ++i) {
-      setState(state => state.concat(typeArray[i]))
-      await sleep(400 / (1.5 * i))
-    }
+      const typeArray = string.split("")
+      for (let i = 0; i < typeArray.length; ++i) {
+        setState(state => state.concat(typeArray[i]))
+        await sleep(400 / (1.5 * i))
+      }
+    
   }
 
   const renderButton = item => {
