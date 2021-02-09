@@ -8,7 +8,7 @@
  * - Vivek Nigam, <viveknigam.nigam3@gmail.com>, 2020
  */
 
-import { Box, makeStyles } from "@material-ui/core"
+import { Box, makeStyles, Typography } from "@material-ui/core"
 import React from "react"
 import GetStartedButton from "./GetStartedButton"
 import ResumePreview from "./ResumePreview"
@@ -23,6 +23,9 @@ const useStyles = makeStyles({
       marginBottom: "6rem",
     },
   },
+  text: {
+    margin: "0 0 1rem 0"
+  }
 })
 
 function MastHead() {
@@ -40,6 +43,9 @@ function MastHead() {
     >
       <TitleText />
       <GetStartedButton />
+      <Typography variant="subtitle1" className={classes.text}>
+        Currently optimized for Chrome/Chromium/Canary browsers.
+      </Typography>
       <ResumePreview />
     </Box>
   )

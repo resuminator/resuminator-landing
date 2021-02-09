@@ -16,7 +16,7 @@ import { FiArrowRight } from "react-icons/fi"
 const useStyles = makeStyles(theme => ({
   button: {
     padding: "0.8rem",
-    margin: "1rem 0 2rem 0",
+    margin: "1rem 0 1rem 0",
     color: theme.palette.text.light,
     fontFamily: "Manrope",
     fontWeight: 700,
