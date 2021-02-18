@@ -25,7 +25,7 @@ const Column = ({ from, title, sametarget }) => {
           component="a"
           variant="body1"
           href={item.link}
-          target={sametarget || "_blank"}
+          target={sametarget ? "" : "_blank"}
           rel="noreferrer"
           color="textSecondary"
           className={styles.listItem}
