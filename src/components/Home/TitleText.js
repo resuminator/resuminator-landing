@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: "1.2rem",
     fontWeight: 400,
     margin: "3rem 0 1rem 0",
-    letterSpacing: -1,
+    letterSpacing: -0.5,
     lineHeight: 1.5,
     "@media (min-width:1280px)": {
       width: "50%",
