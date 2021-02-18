@@ -31,7 +31,7 @@ function Footer() {
       <Box id="columns" className={styles.columns}>
         <InfoBanner />
         <Column from={OpenSource} title="Open Source" />
-        <Column from={Legal} title="Legal" />
+        <Column from={Legal} title="Legal" sametarget/>
       </Box>
       <Typography
         component="a"

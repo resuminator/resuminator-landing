@@ -1,4 +1,4 @@
-import { makeStyles, Typography } from "@material-ui/core"
+import { Link, makeStyles, Typography } from "@material-ui/core"
 import React from "react"
 
 const useStyles = makeStyles({
@@ -11,14 +11,27 @@ const useStyles = makeStyles({
     },
     fontFamily: "Karla",
   },
+  link: {
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "none",
+    },
+  },
 })
 
 const Logo = () => {
   const classes = useStyles()
   return (
-    <Typography id="logo" variant="h4" className={classes.root} color="primary">
-      Resuminator
-    </Typography>
+    <Link className={classes.link} href="/">
+      <Typography
+        id="logo"
+        variant="h4"
+        className={classes.root}
+        color="primary"
+      >
+        Resuminator
+      </Typography>
+    </Link>
   )
 }
 
