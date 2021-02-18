@@ -14,7 +14,7 @@ import { FiGithub } from "react-icons/fi"
 import styles from "../../styles/footer.module.css"
 import { RESUMINATOR_REPO_LINK } from "../Constants"
 import Column from "./Column"
-import { OpenSource } from "./ColumnsList"
+import { Legal, OpenSource } from "./ColumnsList"
 import InfoBanner from "./InfoBanner"
 
 const useStyles = makeStyles(theme => ({
@@ -31,6 +31,7 @@ function Footer() {
       <Box id="columns" className={styles.columns}>
         <InfoBanner />
         <Column from={OpenSource} title="Open Source" />
+        <Column from={Legal} title="Legal" />
       </Box>
       <Typography
         component="a"

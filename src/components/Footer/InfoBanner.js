@@ -34,7 +34,7 @@ const InfoBanner = () => {
         color="textSecondary"
         className={styles.subtext}
       >
-        Resuminator is a project developed and maintained by Vivek Nigam.
+        Resuminator is developed by Vivek Nigam and maintained by the Resuminator community.
       </Typography>
     </Box>
   )
