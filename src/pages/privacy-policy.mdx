@@ -3,7 +3,7 @@ title: "Resuminator: Build beautiful single-page resumes | Privacy Policy"
 path: /privacy-policy
 date: 2021-02-09
 ---
-
+import { Helmet } from "react-helmet"
 import { Box, Typography, MuiThemeProvider } from "@material-ui/core"
 import MenuBar from "../components/Header/MenuBar"
 import Footer from "../components/Footer/Footer"
@@ -11,6 +11,7 @@ import { theme } from "../styles/theme"
 import styles from "../styles/mdx.module.css"
 
 <MuiThemeProvider theme={theme}>
+<Helmet title="Privacy Policy | Resuminator: Build beautiful single-page resumes"/>
 <MenuBar/>
 <Box className={styles.root}>
 
