@@ -42,10 +42,10 @@ export const Legal = [
   },
   {
     text: "Privacy Policy",
-    link: "#privacy-policy",
+    link: "/privacy-policy",
   },
   {
-    text: "Terms of Use",
-    link: "",
+    text: "Cookies Policy",
+    link: "/cookies-policy",
   },
 ]
