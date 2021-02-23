@@ -15,6 +15,7 @@ import Footer from "../components/Footer/Footer"
 import MenuBar from "../components/Header/MenuBar"
 import MastHead from "../components/Home/MastHead"
 import Meta from "../components/Meta"
+import PolicyBanner from "../components/Privacy/PolicyBanner"
 import Steps from "../components/Steps/Steps"
 import { theme } from "../styles/theme"
 
@@ -26,6 +27,7 @@ export default function Home() {
       <MastHead />
       <Steps />
       <Banner />
+      <PolicyBanner />
       <Footer />
     </MuiThemeProvider>
   )
