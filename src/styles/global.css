@@ -1,6 +1,6 @@
 html, body, #___gatsby #gatsby-focus-wrapper {
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;

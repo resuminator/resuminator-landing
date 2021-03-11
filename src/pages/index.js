@@ -11,6 +11,7 @@
 import { MuiThemeProvider } from "@material-ui/core"
 import React from "react"
 import Banner from "../components/Banner/Banner"
+import ProductHunt from "../components/common/ProductHunt"
 import Footer from "../components/Footer/Footer"
 import MenuBar from "../components/Header/MenuBar"
 import MastHead from "../components/Home/MastHead"
@@ -28,6 +29,7 @@ export default function Home() {
       <Steps />
       <Banner />
       <PolicyBanner />
+      <ProductHunt/>
       <Footer />
     </MuiThemeProvider>
   )
