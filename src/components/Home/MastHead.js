@@ -17,6 +17,7 @@ import TitleText from "./TitleText"
 const useStyles = makeStyles({
   root: {
     fontFamily: "Inter",
+    marginTop: "8rem",
     "@media (min-width:1280px)": {
       margin: "8rem",
       marginTop: "8rem",

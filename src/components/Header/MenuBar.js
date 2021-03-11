@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     fontFamily: "Manrope",
     color: theme.palette.text.primary,
-    padding: "2rem 4rem 2rem 4rem",
+    padding: "2rem 2rem 2rem 2rem",
     position: "fixed",
     width: "100%",
     "@media (min-width:1280px)": {
