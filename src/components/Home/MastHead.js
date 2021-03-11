@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     fontFamily: "Inter",
     "@media (min-width:1280px)": {
       margin: "8rem",
-      marginTop: "6rem",
+      marginTop: "8rem",
       marginBottom: "6rem",
     },
   },

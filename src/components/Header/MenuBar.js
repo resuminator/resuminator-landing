@@ -20,8 +20,10 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "Manrope",
     color: theme.palette.text.primary,
     padding: "2rem 4rem 2rem 4rem",
+    position: "fixed",
+    width: "100%",
     "@media (min-width:1280px)": {
-        padding: "3rem 8rem 2rem 8rem",
+      padding: "2rem 8rem 2rem 8rem",
       marginBottom: 0,
     },
   },
