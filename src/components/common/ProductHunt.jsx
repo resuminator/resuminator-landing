@@ -3,7 +3,7 @@ import React from "react"
 
 const ProductHunt = () => {
   const [lastYPos, setLastYPos] = React.useState(0)
-  const [shouldShowActions, setShouldShowActions] = React.useState(false)
+  const [shouldShowActions, setShouldShowActions] = React.useState(true)
 
   React.useEffect(() => {
     function handleScroll() {
